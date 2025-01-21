@@ -173,22 +173,39 @@
                         <h2>Downloads</h2>
                     </div>
                     <ul>
-                        @foreach (\App\Models\Subcategory::all() as $category)
+                        @foreach (\App\Models\Subcategory::with('banners')->get() as $subcategory)
                             <li>
-                                <a href="#">
-                                    {{ $category->name }}
-                                    <img src="{{ asset('images/pdf.png') }}" alt="pdf" style="width: 20px; vertical-align: middle;">
+
+                                    <span class="subcategory-name">{{ $subcategory->name }}</span>
+
+
+                                    @if ($subcategory->banners->count() > 0)
+                                        @foreach ($subcategory->banners as $banner)
+                                            <!-- Display PDF link -->
+                                            @if ($banner->thumbnail_img)
+                                                <a href="{{ Storage::url($banner->thumbnail_img) }}" target="_blank" class="pdf-link">
+                                                    <img src="{{ asset('images/pdf.png') }}" alt="pdf" class="pdf-icon">
+                                                </a>
+                                            @else
+                                                <span class="text-muted">(No PDF)</span>
+                                            @endif
+                                        @endforeach
+                                    @else
+                                        <span class="text-muted">(No PDF)</span>
+                                    @endif
                                 </a>
                             </li>
                         @endforeach
                     </ul>
                 </div>
             </div>
+
         </div>
 
 </section>
 
 <style>
+/* Ensure both containers are aligned and occupy the full space */
 /* Ensure both containers are aligned and occupy the full space */
 /* Ensure both containers are aligned and occupy the full space */
 .no_padding {
@@ -198,24 +215,21 @@
 
 /* Ensure the right Downloads container has a fixed height and scrolls when necessary */
 .hm_dwnlds {
-     /* Add border for visibility */
-    padding: 10px;  /* Padding for aesthetic purposes */
+    padding: 10px;
 }
 
 /* Make the header fixed and prevent it from scrolling */
 .hm_dwnlds .head {
     position: sticky;
     top: 0;
- /* Ensure header background stays visible */
     padding: 10px;
-    z-index: 10;  /* Make sure the header stays above the list */
-  /* Add shadow for better visibility */
+    z-index: 10;
 }
 
 /* Set a fixed height for the list container and make it scrollable */
 .hm_dwnlds ul {
-    max-height: 300px;  /* Set the height of the list container */
-    overflow-y: auto;   /* Enable vertical scrolling if content exceeds the max height */
+    max-height: 300px;
+    overflow-y: auto;
     padding-left: 0;
     list-style-type: none;
 }
@@ -227,17 +241,49 @@
 
 /* Make sure links are styled properly */
 .hm_dwnlds ul li a {
-    text-decoration: none;  /* Remove underline from links */
-    color: #333;  /* Dark text color */
+    text-decoration: none;
+    color: #333;
     font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
-/* Adjust for mobile responsiveness */
+/* Align the subcategory name and PDF icon horizontally */
+.subcategory-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subcategory-name {
+    margin-right: 10px;
+    flex-grow: 1; /* Ensure the name takes available space */
+}
+
+/* Custom styles for PDF link */
+.pdf-link {
+    margin-left: 5px;
+}
+
+.pdf-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Ensure that if there's no PDF, the "No PDF" message is aligned properly */
+.text-muted {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Adjust max-height for mobile devices */
 @media (max-width: 767px) {
     .hm_dwnlds ul {
-        max-height: 250px;  /* Adjust max-height for mobile devices */
+        max-height: 250px;
     }
 }
+
+
 
 </style>
 

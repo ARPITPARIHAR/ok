@@ -73,25 +73,24 @@
 
 
 
-                                            @foreach (\App\Models\Category::with('subcategories')->get() as $category)
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link @if($category->subcategories->count() > 0) dropdown-toggle @endif" href="#"
-                                                   id="navbarDropdown{{ $category->id }}"
-                                                   role="button"
-                                                   data-bs-toggle="dropdown"
-                                                   aria-expanded="false">
-                                                    {{ $category->name }}
-                                                </a>
+                                        @foreach (\App\Models\Category::with(['subcategories', 'subcategories.banners'])->get() as $category)
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link @if($category->subcategories->count() > 0) dropdown-toggle @endif" href="#"
+                                               id="navbarDropdown{{ $category->id }}"
+                                               role="button"
+                                               data-bs-toggle="dropdown"
+                                               aria-expanded="false">
+                                                {{ $category->name }}
+                                            </a>
 
-                                                <!-- Dynamic Subcategories -->
-                                                @if ($category->subcategories->count() > 0)
-                                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ $category->id }}">
-                                                        @foreach ($category->subcategories as $subcategory)
-                                                            <li>
-                                                                @if ($subcategory->pdf)
-                                                                    <a class="dropdown-item"
-                                                                       href="{{ route('subcategory.download', $subcategory->id) }}"
-                                                                       target="_blank">
+                                            <!-- Dynamic Subcategories -->
+                                            @if ($category->subcategories->count() > 0)
+                                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ $category->id }}">
+                                                    @foreach ($category->subcategories as $subcategory)
+                                                        <li>
+                                                            @foreach ($subcategory->banners as $banner)
+                                                                @if ($banner->thumbnail_img) <!-- Check if there's a PDF or image -->
+                                                                    <a class="dropdown-item" href="{{ Storage::url($banner->thumbnail_img) }}" target="_blank">
                                                                         {{ $subcategory->name }}
                                                                     </a>
                                                                 @else
@@ -99,12 +98,14 @@
                                                                         {{ $subcategory->name }} (No PDF)
                                                                     </span>
                                                                 @endif
-                                                            </li>
-                                                        @endforeach
-                                                    </ul>
-                                                @endif
-                                            </li>
-                                        @endforeach
+                                                            @endforeach
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            @endif
+                                        </li>
+                                    @endforeach
+
 
 
                                             <li class="nav-item"><a class="nav-link" href="/gallery">Photo Gallery</a></li>

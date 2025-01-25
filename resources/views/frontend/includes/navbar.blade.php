@@ -8,8 +8,9 @@
 						<div class="col-lg-12 no_padding">
 							<div class="logo">
 
-                                    <a href="{{ route('home') }}"><img src="{{businessSetting(1)->header_logo}}" alt="logo"></a>
-
+                                <a href="{{ url('/') }}">
+                                    <img src="{{ (businessSetting(1)->header_logo) }}" alt="logo">
+                                </a>
 
 							</div>
 						</div>

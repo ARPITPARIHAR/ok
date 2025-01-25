@@ -3,7 +3,10 @@
 		<div class="row">
 			<div class="col-xl-4 col-lg-12 col-md-12">
 				<div class="ftr_abt">
-					<img src="images/ftr_logo.png" alt="ftr_logo">
+
+ <a href="{{ url('/') }}">
+    <img src="{{ (businessSetting(1)->footer_logo) }}" alt="logo">
+</a>
 					<p>{{businessSetting(1)->brief_description}}</p>
 				</div>
 			</div>

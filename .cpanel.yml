@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/ricem/demo.ricem.org/
+    - export DEPLOYPATH=/home/ccbdausa/public_html/
     - /bin/cp -r * $DEPLOYPATH

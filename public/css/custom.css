@@ -5,7 +5,7 @@ body {background: #fff; font-family: "Lato", sans-serif; font-size:14px; color:#
 
 .no_padding {
   padding-left: 0;
-  padding-right: 0;  
+  padding-right: 0;
 }
 ul {
   padding:0;
@@ -28,7 +28,7 @@ ul {
 }
 input:focus, .form-control:focus, .accordion-button:focus {
   outline: 0;
-  box-shadow: none;	  
+  box-shadow: none;
   border-color: none;
 }
 
@@ -40,10 +40,10 @@ input:focus, .form-control:focus, .accordion-button:focus {
     display: none;
 }
 .header .main_head .menus {
-	background: #2b8046;	
+	background: #2b8046;
 }
 .header .main_head .menus .navbar {
-    padding: 0;		
+    padding: 0;
 }
 .header .main_head .menus .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
     color: #fff;
@@ -130,7 +130,7 @@ input:focus, .form-control:focus, .accordion-button:focus {
     text-align: center;
 }
 .hm_srvcs .hm_srvc_txt .head hr {
-    margin: 0 auto;	
+    margin: 0 auto;
 }
 .hm_srvcs .srvc_box {
     display: flex;
@@ -254,10 +254,11 @@ input:focus, .form-control:focus, .accordion-button:focus {
 }
 
 footer {
-    background-image: url(../images/ftr_bg.jpg);
+    background-image: url('images/ftr_bg.jpg');
+
 	background-repeat: no-repeat;
 	background-position: top center;
-    background-size: cover;	
+    background-size: cover;
 	padding: 70px 0 40px;
 }
 footer .ftr_abt img {
@@ -314,7 +315,7 @@ footer .cntct .adrs .adrs_box p a {
     text-decoration: none;
 }
 .copyright {
-	background: #f58221;	
+	background: #f58221;
 	text-align: center;
 }
 .copyright p {
@@ -326,11 +327,11 @@ footer .cntct .adrs .adrs_box p a {
 
 
 .inner_banner .inr_bnr img, .about .hm_abt_imag img {
-    width: 100%;	
+    width: 100%;
 }
 
 .hm_abt.about {
-	margin-bottom: 70px;	
+	margin-bottom: 70px;
 }
 .hm_abt.about_wtht_sdbr .leftNav li {
     display: block;
@@ -348,7 +349,7 @@ footer .cntct .adrs .adrs_box p a {
     -webkit-transition: all 0.4s ease-in-out;
 }
 .hm_abt.about_wtht_sdbr .hm_abt_imag img {
-    width: 100%;	
+    width: 100%;
 }
 .hm_abt.about_wtht_sdbr .hm_abt_txt {
     padding: 0;
@@ -356,7 +357,7 @@ footer .cntct .adrs .adrs_box p a {
 }
 
 .contact {
-    margin: 90px 0 70px;	
+    margin: 90px 0 70px;
 }
 .contact .cntct_box {
     display: flex;

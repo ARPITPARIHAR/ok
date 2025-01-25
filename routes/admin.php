@@ -54,17 +54,20 @@ Route::controller(SliderController::class)->group(function () {
         Route::get('{id}/delete', 'destroy')->name('delete');
     });
 });
-Route::controller(PageController::class)->group(function () {
-    Route::group(['prefix' => 'pages', 'as' => 'admin.pages.'], function () {
-        Route::get('/', 'index')->name('index');
-        Route::get('create', 'create')->name('create');
-        Route::post('store', 'store')->name('store');
-        Route::get('{id}/edit', 'edit')->name('edit');
-        Route::post('{id}/edit', 'update')->name('update');
-        Route::get('{id}/delete', 'destroy')->name('delete');
-        Route::post('featured-unfeatured', 'featuredUnfeatured')->name('featured-unfeatured');
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+    Route::controller(PageController::class)->group(function () {
+        Route::group(['prefix' => 'pages', 'as' => 'pages.'], function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('create', 'create')->name('create');
+            Route::post('store', 'store')->name('store');
+            Route::get('{id}/edit', 'edit')->name('edit');
+            Route::post('{id}/edit', 'update')->name('update');
+            Route::get('{id}/delete', 'destroy')->name('delete');
+            Route::post('featured-unfeatured', 'featuredUnfeatured')->name('featured-unfeatured');
+        });
     });
 });
+
 // Board routes
 Route::controller(OurServicesController::class)->group(function () {
     Route::group(['prefix' => 'ourservices', 'as' => 'ourservices.'], function () {

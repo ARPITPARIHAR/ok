@@ -105,7 +105,7 @@
                             <div class="srvc_icn">
                                 <div class="srvc_icn_inr">
                                     <!-- Assuming you store the image path in 'thumbnail_img' column -->
-                                    <img src="{{ asset('storage/' . $service->thumbnail_img) }}" alt="srvc_icn">
+                                    <img src="{{ ($service->thumbnail_img) }}" alt="srvc_icn">
                                 </div>
                             </div>
                             <div class="srvc_txt">
@@ -183,10 +183,9 @@
                                         @foreach ($subcategory->banners as $banner)
                                             <!-- Display PDF link -->
                                             @if ($banner->thumbnail_img)
-                                            {{-- <a href="{{  asset($upcoming->pdf_file) }}" download >
-                                                <img src="{{ asset('images/pdf.png') }}" alt="pdf"> --}}
-                                                <a href="{{ asset($banner->thumbnail_img) }}" target="_blank" class="pdf-link">
-                                                    <img src="{{ asset('images/pdf.png') }}" alt="pdf" class="pdf-icon">
+
+                                                <a href="{{ ($banner->thumbnail_img) }}" target="_blank" class="pdf-link">
+                                                    <img src="{{('images/pdf.png') }}" alt="pdf" class="pdf-icon">
                                                 </a>
                                             @else
                                                 <span class="text-muted">(No PDF)</span>
@@ -210,72 +209,93 @@
 /* Ensure both containers are aligned and occupy the full space */
 /* Ensure both containers are aligned and occupy the full space */
 /* Ensure both containers are aligned and occupy the full space */
+/* Ensure both containers are aligned and occupy the full space */
 .no_padding {
     padding: 0;
     margin: 0;
 }
 
-/* Ensure the right Downloads container has a fixed height and scrolls when necessary */
+/* Downloads container styling */
 .hm_dwnlds {
     padding: 10px;
+* Light background for better contrast */
+
+
 }
 
-/* Make the header fixed and prevent it from scrolling */
+/* Header inside the Downloads container */
 .hm_dwnlds .head {
     position: sticky;
     top: 0;
+ /* Match the container's background */
     padding: 10px;
     z-index: 10;
+
 }
 
-/* Set a fixed height for the list container and make it scrollable */
+/* Scrollable list styling */
 .hm_dwnlds ul {
-    max-height: 300px;
-    overflow-y: auto;
+    max-height: 300px; /* Set a fixed height for the list */
+    overflow-y: auto; /* Enable vertical scrolling */
     padding-left: 0;
     list-style-type: none;
 }
 
-/* Add spacing to list items */
+/* List items styling */
 .hm_dwnlds ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 10px;
+    padding: 5px;
+    /* Add a subtle divider between items */
 }
 
-/* Make sure links are styled properly */
+/* Styling for links */
 .hm_dwnlds ul li a {
     text-decoration: none;
-    color: #333;
+
     font-weight: bold;
     display: flex;
     align-items: center;
 }
 
-/* Align the subcategory name and PDF icon horizontally */
-.subcategory-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
+/* Subcategory name styling */
 .subcategory-name {
     margin-right: 10px;
-    flex-grow: 1; /* Ensure the name takes available space */
+    flex-grow: 1;
+    font-size: 16px;
+
 }
 
-/* Custom styles for PDF link */
+/* PDF link styling */
 .pdf-link {
     margin-left: 5px;
 }
 
 .pdf-icon {
-    width: 40px;
-    height: 40px;
+    width: 30px; /* Adjusted size for better fit */
+    height: 30px;
 }
 
-/* Ensure that if there's no PDF, the "No PDF" message is aligned properly */
+/* "No PDF" text styling */
 .text-muted {
     font-size: 14px;
-    margin-left: 10px;
+    color:white !important;
+}
+
+/* Scroll bar customization */
+.hm_dwnlds ul::-webkit-scrollbar {
+    width: 8px; /* Scrollbar width */
+}
+
+.hm_dwnlds ul::-webkit-scrollbar-thumb {
+    background-color: white; /* White scrollbar thumb */
+    border-radius: 5px;
+}
+
+.hm_dwnlds ul::-webkit-scrollbar-track {
+    background-color: red; /* Red background for the scrollbar track */
 }
 
 /* Adjust max-height for mobile devices */
@@ -283,7 +303,13 @@
     .hm_dwnlds ul {
         max-height: 250px;
     }
+
+    .pdf-icon {
+        width: 25px;
+        height: 25px;
+    }
 }
+
 
 
 

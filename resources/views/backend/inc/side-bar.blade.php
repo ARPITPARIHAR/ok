@@ -7,7 +7,7 @@
                     <span class="pcoded-mtext">{{ __('Business Settings') }}</span>
                 </a>
             </li>
-            <li class="{{ areActiveRoutes(['admin.pages.index','admin.pages.create','admin.pages.edit']) }}">
+            <li class="{{ areActiveRoutes(['pages.index','pages.create','pages.edit']) }}">
                 <a href="{{ route('admin.pages.index') }}">
                     <span class="pcoded-micon"><i class="feather icon-file"></i></span>
                     <span class="pcoded-mtext">{{ __('Pages') }}</span>

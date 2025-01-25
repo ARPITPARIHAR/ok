@@ -91,7 +91,7 @@
                                                         <li>
                                                             @foreach ($subcategory->banners as $banner)
                                                                 @if ($banner->thumbnail_img) <!-- Check if there's a PDF or image -->
-                                                                    <a class="dropdown-item" href="{{ Storage::url($banner->thumbnail_img) }}" target="_blank">
+                                                                    <a class="dropdown-item" href="{{ ($banner->thumbnail_img) }}" target="_blank">
                                                                         {{ $subcategory->name }}
                                                                     </a>
                                                                 @else

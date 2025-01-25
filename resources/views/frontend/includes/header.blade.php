@@ -183,7 +183,9 @@
                                         @foreach ($subcategory->banners as $banner)
                                             <!-- Display PDF link -->
                                             @if ($banner->thumbnail_img)
-                                                <a href="{{ Storage::url($banner->thumbnail_img) }}" target="_blank" class="pdf-link">
+                                            {{-- <a href="{{  asset($upcoming->pdf_file) }}" download >
+                                                <img src="{{ asset('images/pdf.png') }}" alt="pdf"> --}}
+                                                <a href="{{ asset($banner->thumbnail_img) }}" target="_blank" class="pdf-link">
                                                     <img src="{{ asset('images/pdf.png') }}" alt="pdf" class="pdf-icon">
                                                 </a>
                                             @else

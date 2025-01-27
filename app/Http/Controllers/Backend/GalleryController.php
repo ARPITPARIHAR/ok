@@ -23,12 +23,12 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|string',
+            // 'title' => 'required|string',
             'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate multiple images
         ]);
 
         $detail = new Gallery;
-        $detail->title = $request->title;
+        // $detail->title = $request->title;
 
         // Handle multiple images
         if ($request->hasFile('images')) {
@@ -64,7 +64,7 @@ class GalleryController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'title' => 'required|string',
+            // 'title' => 'required|string',
             'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate multiple images
         ]);
 
@@ -89,7 +89,7 @@ class GalleryController extends Controller
             }
         }
         $detail->image_paths = json_encode($imagePaths);
-        $detail->title = $request->title;
+        // $detail->title = $request->title;
         $detail->save();
 
         Artisan::call('cache:clear');

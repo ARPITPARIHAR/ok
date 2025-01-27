@@ -38,7 +38,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group row">
+                    {{-- <div class="form-group row">
                         <label class="col-sm-2 col-form-label">{{ __('Title') }}</label>
                         <div class="col-sm-10">
                             <input type="text" name="title" id="title" value="{{ old('title') ?? $detail->title }}" placeholder="{{ __('Enter Title') }}" class="form-control @error('title') form-control-danger @enderror">
@@ -48,7 +48,7 @@
                                 <p class="text-muted">{{ __('') }}</p>
                             @enderror
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div id="image-fields">
                         @php

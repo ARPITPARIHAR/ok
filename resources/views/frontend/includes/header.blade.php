@@ -327,39 +327,20 @@
 					</div>
 				</div>
 
-				<div class="glry_slide owl-carousel owl-theme">
-					<div class="item">
-						<div class="tm_box">
-							<a class="example-image-link" href="images/full_glry001.jpg" data-lightbox="example-set"><img class="example-image" src="images/hm_glry001.jpg" alt="glry"></a>
-						</div>
-					</div>
-					<div class="item">
-						<div class="tm_box">
-							<a class="example-image-link" href="images/full_glry001.jpg" data-lightbox="example-set"><img class="example-image" src="images/hm_glry002.jpg" alt="glry"></a>
-						</div>
-					</div>
-					<div class="item">
-						<div class="tm_box">
-							<a class="example-image-link" href="images/full_glry001.jpg" data-lightbox="example-set"><img class="example-image" src="images/hm_glry003.jpg" alt="glry"></a>
-						</div>
-					</div>
-					<div class="item">
-						<div class="tm_box">
-							<a class="example-image-link" href="images/full_glry001.jpg" data-lightbox="example-set"><img class="example-image" src="images/hm_glry004.jpg" alt="glry"></a>
-						</div>
-					</div>
-					<div class="item">
-						<div class="tm_box">
-							<a class="example-image-link" href="images/full_glry005.jpg" data-lightbox="example-set"><img class="example-image" src="images/hm_glry005.jpg" alt="glry"></a>
-						</div>
-					</div>
-					<div class="item">
-						<div class="tm_box">
-							<a class="example-image-link" href="images/full_glry006.jpg" data-lightbox="example-set"><img class="example-image" src="images/hm_glry006.jpg" alt="glry"></a>
-						</div>
-					</div>
-				</div>
-			</div>
+                <div class="glry_slide owl-carousel owl-theme">
+                    @foreach(\App\Models\Fallery::all() as $service)
+                        <div class="item">
+                            <div class="tm_box">
+                                <!-- Full image link -->
+                                <a class="example-image-link" href="{{ asset('images/' . $service->image_paths) }}" data-lightbox="example-set">
+                                    <!-- Full image (used as thumbnail as well) -->
+                                    <img class="example-image" src="{{ asset('images/' . $service->image_paths) }}" alt="{{ $service->title }}">
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
 		</div>
 	</div>
 </section>

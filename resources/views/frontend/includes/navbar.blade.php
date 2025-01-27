@@ -42,15 +42,14 @@
                                                             @endforeach
                                                         </ul>
                                                     @endif --}}
-                                                <
+                                                
                                             {{-- @endforeach --}} --
-                                            <!-- Dynamic Categories -->
+
                                             <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
                                             @foreach (\App\Models\Page::with('children')->where('parent_id', 0)->get() as $parentPage)
                                             <div class="page-item">
                                                 <h3>{{ $parentPage->name }}</h3>
 
-                                                <!-- Check if there are child pages (subcategories) for the parent page -->
                                                 @if ($parentPage->children->count() > 0)
                                                     <div class="dropdown">
                                                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton{{ $parentPage->id }}" data-bs-toggle="dropdown" aria-expanded="false">

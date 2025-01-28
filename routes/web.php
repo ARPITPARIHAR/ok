@@ -23,32 +23,16 @@ Route::get('/clear/{command}', function ($command) {
 
 Route::controller(PageController::class)->group(function () {
     Route::get('/', 'home')->name('home');
-    Route::get('vision', 'vision')->name('visions');
-    Route::get('mission', 'mission')->name('missions');
-    Route::get('mdmessage', 'mdmessage')->name('mdmessage');
-    Route::get('infastructure', 'infastructure')->name('infastructure');
-    Route::get('contact', 'contact_us')->name('contact-us');
-    Route::get('gallery', 'gallery')->name('gallery');
-    Route::get('gallery-detail/{slug}', 'galleryDetail')->name('gallery.detail');
-    Route::get('tenders', 'tenders')->name('tenders');
-    Route::get('placement-service', 'placementservice')->name('placementservice');
-    Route::get('abouts', 'about')->name('abouts');
-    Route::get('hostel-facility', 'hostel_facility')->name('hostelservice');
-    Route::get('board-of-directory', 'boardofdirectory')->name('boardofdirectory');
-    Route::get('team-member', 'teamofmember')->name('teamofmember');
-    Route::get('traning-programme', 'traningprogramme')->name('traningprogramme');
-    Route::get('study-material', 'studymaterial')->name('studymaterial');
-    Route::get('reliving-orders', 'relivingorders')->name('relivingorders');
-    Route::get('feedback', 'feedback')->name('feedback');
-    Route::get('login-register', 'login_register')->name('login-register');
-    Route::get('/training/{id}',  'training_show')->name('training.show');
-    Route::get('/reliving-show/{id}',  'reliving_show')->name('reliving.show');
-    Route::get('/study-show/{id}',  'study_show')->name('studymaterial.show');
-    Route::get('/tender/{id}',  'tender_show')->name('tender.show');
-    Route::get('/page/{slug}',  'page')->name('page');
-    Route::get('/management/{slug}',  'managementDetail')->name('management.detail');
-});
 
+    Route::get('mdmessage', 'mdmessage')->name('mdmessage');
+
+
+
+    Route::get('abouts', 'about')->name('abouts');
+
+
+});
+Route::get('page/{slug}', [PageController::class, 'show'])->name('page.show');
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('login', [LoginController::class, 'adminlogin'])->name('login'); // Display login form

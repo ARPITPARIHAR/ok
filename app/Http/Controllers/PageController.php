@@ -116,26 +116,20 @@ class PageController extends Controller
         return view('frontend.relivingshow', compact('trainingEvents'));
     }
 
+    public function show($slug)
+    {
+        $page = Page::where('name', 'like', str_replace('-', ' ', $slug))->firstOrFail();
 
-    public function study_show($id)
-    {
-        $trainingEvents = Study::where('category_id', $id)->get();
-        return view('frontend.studyshow', compact('trainingEvents'));
+        // Check if a Blade view exists for the given slug
+        $viewName = 'pages.' . Str::slug($slug); // Example: 'pages.mdmessage' for 'md-message'
+
+        if (view()->exists($viewName)) {
+            return view($viewName, compact('page'));
+        }
+
+        // If no specific Blade view exists, load a generic page view
+        return view('pages.show', compact('page'));
     }
 
-    public function tender_show($id)
-    {
-        $trainingEvents = Tender::where('category_id', $id)->get();
-        return view('frontend.tendersshow', compact('trainingEvents'));
-    }
-    public function page($slug)
-    {
-        $page = Page::where('slug', $slug)->first();
-        return view('frontend.page', compact('page'));
-    }
-    public function managementDetail($slug)
-    {
-        $management = Management::where('slug', $slug)->first();
-        return view('frontend.management-detail', compact('management'));
-    }
+
 }

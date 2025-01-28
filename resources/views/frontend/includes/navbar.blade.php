@@ -14,7 +14,7 @@
 
 							</div>
 						</div>
-						<div class="col-lg-12 no_padding">
+				<div class="col-lg-12 no_padding">
                             <div class="menus">
                                 <nav class="navbar navbar-expand-lg navbar-light">
                                     <button class="navbar-toggler" type="button" onclick="sdbr_open()">
@@ -46,8 +46,36 @@
                                             {{-- @endforeach --}} --
 
                                             <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
-                                        
+  @php
+    use Illuminate\Support\Str;
+@endphp
 
+<ul class="navbar-nav">
+    @foreach(\App\Models\Page::where('parent_id', 0)->get() as $page)
+        <li class="nav-item dropdown">
+            <a class="nav-link @if($page->children->count() > 0) dropdown-toggle @endif"
+               href="{{ url('page/' . Str::slug($page->name)) }}"
+               id="navbarDropdown{{ $page->id }}"
+               role="button" data-bs-toggle="dropdown"
+               aria-expanded="false">
+                {{ $page->name }}
+            </a>
+
+            <!-- Dynamic Subpages Dropdown -->
+            @if($page->children->count() > 0)
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ $page->id }}">
+                    @foreach($page->children as $child)
+                        <li>
+                            <a class="dropdown-item" href="{{ url('page/' . Str::slug($child->name)) }}">
+                                {{ $child->name }}
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            @endif
+        </li>
+    @endforeach
+</ul>
 
 
                                         @foreach (\App\Models\Category::with(['subcategories', 'subcategories.banners'])->get() as $category)

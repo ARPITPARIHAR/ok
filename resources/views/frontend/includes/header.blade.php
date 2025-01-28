@@ -333,7 +333,7 @@
                             <div class="tm_box">
 
                                 <a class="example-image-link" href="{{ asset('images/' . $service->image_paths) }}" data-lightbox="example-set">
-                                    <!-- Full image (used as thumbnail as well) -->
+                                   
                                     <img class="example-image" src="{{ $service->image_paths) }}" alt="{{ $service->title }}">
                                 </a>
                             </div>

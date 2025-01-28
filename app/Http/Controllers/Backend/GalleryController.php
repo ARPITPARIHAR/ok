@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
@@ -28,29 +27,15 @@ class GalleryController extends Controller
         ]);
 
         $detail = new Gallery;
-        // $detail->title = $request->title;
-
-        // Handle multiple images
 
 
-        // if ($request->hasFile('thumbnail_img')) {
-        //     $fileName = time() . '-board-' . $request->file('thumbnail_img')->getClientOriginalName();
-        //     $filePath = $request->file('thumbnail_img')->storeAs('uploads/boards', $fileName, 'public');
-        //     $detail->thumbnail_img = '/public/storage/' . $filePath;
-        // }
-        if ($request->hasFile('images')) {
-            $imagePaths = [];
-            foreach ($request->file('images') as $image) {
-                // Generate a unique file name
-                $fileName = time() . '-' . $image->getClientOriginalName();
-                // Store the image
-                $filePath = $image->storeAs('uploads/images', $fileName, 'public');
-                // Save the image path
-                $imagePaths[] = '/public/storage/' . $filePath;
-            }
-            // Store the image paths in the database (as JSON)
-            $detail->image_paths = json_encode($imagePaths);
+
+        if ($request->hasFile('thumbnail_img')) {
+            $fileName = time() . '-board-' . $request->file('thumbnail_img')->getClientOriginalName();
+            $filePath = $request->file('thumbnail_img')->storeAs('uploads/boards', $fileName, 'public');
+            $detail->image_paths = '/public/storage/' . $filePath;
         }
+
 
         $detail->save();
         Artisan::call('cache:clear');
@@ -71,8 +56,8 @@ class GalleryController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            // 'title' => 'required|string',
-            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate multiple images
+           
+            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $detail = Gallery::findOrFail(decrypt($id));
@@ -87,7 +72,7 @@ class GalleryController extends Controller
                 // Save the image path
                 $imagePaths[] = '/public/storage/' . $filePath;
             }
-            // Store the image paths in the database (as JSON)
+
 
         }
         if ($request->old_images) {
@@ -96,7 +81,7 @@ class GalleryController extends Controller
             }
         }
         $detail->image_paths = json_encode($imagePaths);
-        // $detail->title = $request->title;
+
         $detail->save();
 
         Artisan::call('cache:clear');

@@ -290,12 +290,12 @@
 }
 
 .hm_dwnlds ul::-webkit-scrollbar-thumb {
-    background-color: white; /* White scrollbar thumb */
+    background-color: white !important; /* White scrollbar thumb */
     border-radius: 5px;
 }
 
 .hm_dwnlds ul::-webkit-scrollbar-track {
-    background-color: red; /* Red background for the scrollbar track */
+    background-color: red !important;/* Red background for the scrollbar track */
 }
 
 /* Adjust max-height for mobile devices */
@@ -328,13 +328,13 @@
 				</div>
 
                 <div class="glry_slide owl-carousel owl-theme">
-                    @foreach(\App\Models\Fallery::all() as $service)
+                    @foreach(\App\Models\Gallery::all() as $service)
                         <div class="item">
                             <div class="tm_box">
-                                <!-- Full image link -->
+
                                 <a class="example-image-link" href="{{ asset('images/' . $service->image_paths) }}" data-lightbox="example-set">
                                     <!-- Full image (used as thumbnail as well) -->
-                                    <img class="example-image" src="{{ asset('images/' . $service->image_paths) }}" alt="{{ $service->title }}">
+                                    <img class="example-image" src="{{ $service->image_paths) }}" alt="{{ $service->title }}">
                                 </a>
                             </div>
                         </div>

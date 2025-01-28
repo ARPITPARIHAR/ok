@@ -31,6 +31,13 @@ class GalleryController extends Controller
         // $detail->title = $request->title;
 
         // Handle multiple images
+
+
+        // if ($request->hasFile('thumbnail_img')) {
+        //     $fileName = time() . '-board-' . $request->file('thumbnail_img')->getClientOriginalName();
+        //     $filePath = $request->file('thumbnail_img')->storeAs('uploads/boards', $fileName, 'public');
+        //     $detail->thumbnail_img = '/public/storage/' . $filePath;
+        // }
         if ($request->hasFile('images')) {
             $imagePaths = [];
             foreach ($request->file('images') as $image) {

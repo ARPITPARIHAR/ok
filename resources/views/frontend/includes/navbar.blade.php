@@ -42,34 +42,11 @@
                                                             @endforeach
                                                         </ul>
                                                     @endif --}}
-                                                
+
                                             {{-- @endforeach --}} --
 
                                             <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
-                                            @foreach (\App\Models\Page::with('children')->where('parent_id', 0)->get() as $parentPage)
-                                            <div class="page-item">
-                                                <h3>{{ $parentPage->name }}</h3>
-
-                                                @if ($parentPage->children->count() > 0)
-                                                    <div class="dropdown">
-                                                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton{{ $parentPage->id }}" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            Subcategories
-                                                        </button>
-                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ $parentPage->id }}">
-                                                            @foreach ($parentPage->children as $child)
-                                                                <li>
-                                                                    <a class="dropdown-item" href="">
-                                                                        {{ $child->name }}
-                                                                    </a>
-                                                                </li>
-                                                            @endforeach
-                                                        </ul>
-                                                    </div>
-                                                @else
-                                                    <p>No subcategories available.</p>
-                                                @endif
-                                            </div>
-                                        @endforeach
+                                        
 
 
 

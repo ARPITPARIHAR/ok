@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app')
+{{-- @extends('frontend.layouts.app')
 @section('meta_title','Vision | '.env('APP_NAME'))
 @section('meta_description','Vision | '.env('APP_NAME'))
 @section('content')
@@ -46,4 +46,4 @@
 @endsection
 @section('script')
 
-@endsection
+@endsection --}}

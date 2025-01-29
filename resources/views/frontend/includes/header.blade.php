@@ -332,9 +332,9 @@
                         <div class="item">
                             <div class="tm_box">
 
-                                <a class="example-image-link" href="{{ asset('images/' . $service->image_paths) }}" data-lightbox="example-set">
-                                   
-                                    <img class="example-image" src="{{ $service->image_paths) }}" alt="{{ $service->title }}">
+                                <a class="example-image-link" href="{{ asset($service->images) }}" data-lightbox="example-set">
+                                    
+                                    <img class="example-image" src="{{ asset($service->images) }}" alt="{{ $service->title }}">
                                 </a>
                             </div>
                         </div>

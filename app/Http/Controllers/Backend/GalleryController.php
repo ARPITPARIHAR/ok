@@ -32,8 +32,8 @@ class GalleryController extends Controller
 
         if ($request->hasFile('thumbnail_img')) {
             $fileName = time() . '-board-' . $request->file('thumbnail_img')->getClientOriginalName();
-            $filePath = $request->file('thumbnail_img')->storeAs('uploads/boards', $fileName, 'public');
-            $detail->image_paths = '/public/storage/' . $filePath;
+            $filePath = $request->file('thumbnail_img')->storeAs('uploads/gallery', $fileName, 'public');
+            $detail->images = '/public/storage/' . $filePath;
         }
 
 
@@ -56,31 +56,17 @@ class GalleryController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-           
+
             'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $detail = Gallery::findOrFail(decrypt($id));
-        $imagePaths = array();
-        if ($request->hasFile('images')) {
-            $imagePaths = [];
-            foreach ($request->file('images') as $image) {
-                // Generate a unique file name
-                $fileName = time() . '-' . $image->getClientOriginalName();
-                // Store the image
-                $filePath = $image->storeAs('uploads/images', $fileName, 'public');
-                // Save the image path
-                $imagePaths[] = '/public/storage/' . $filePath;
-            }
-
-
+        if ($request->hasFile('thumbnail_img')) {
+            $fileName = time() . '-board-' . $request->file('thumbnail_img')->getClientOriginalName();
+            $filePath = $request->file('thumbnail_img')->storeAs('uploads/gallery', $fileName, 'public');
+            $detail->images = '/public/storage/' . $filePath;
         }
-        if ($request->old_images) {
-            foreach ($request->old_images as $key => $image) {
-                $imagePaths[] = $image;
-            }
-        }
-        $detail->image_paths = json_encode($imagePaths);
+
 
         $detail->save();
 

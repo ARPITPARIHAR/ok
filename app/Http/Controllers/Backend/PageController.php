@@ -42,6 +42,11 @@ class PageController extends Controller
             'description' => 'required|string',
             'header_img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'thumbnail_img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'serial_no'     => 'required|integer',
+            'top_serial_no' => 'nullable|integer',
+            'bottom_serial_no' => 'nullable|integer',
+            'top_menu'      => 'nullable|string|max:255',
+            'bottom_menu'   => 'nullable|string|max:255',
         ]);
         $page = new Page;
         if ($request->page) {
@@ -55,6 +60,11 @@ class PageController extends Controller
         $page->meta_description = $request->meta_description;
         $page->brief_description = $request->brief_description;
         $page->description = $request->description;
+        $page->serial_no = $request->serial_no;
+        $page->top_serial_no = $request->top_serial_no;
+        $page->bottom_serial_no = $request->bottom_serial_no;
+        $page->top_menu = $request->top_menu;
+        $page->bottom_menu = $request->bottom_menu;
         if ($request->hasFile('header_img')) {
             $fileName = time() . '-header-img-' . $request->file('header_img')->getClientOriginalName();
             $filePath = $request->file('header_img')->storeAs('uploads/pages', $fileName, 'public');
@@ -104,6 +114,11 @@ class PageController extends Controller
             'description' => 'required|string',
             'header_img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'thumbnail_img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'serial_no'     => 'required|integer',
+            'top_serial_no' => 'nullable|integer',
+            'bottom_serial_no' => 'nullable|integer',
+            'top_menu'      => 'nullable|string|max:255',
+            'bottom_menu'   => 'nullable|string|max:255',
         ]);
         $page = Page::findOrFail(decrypt($id));
         // if ($request->page) {
@@ -120,6 +135,11 @@ class PageController extends Controller
         $page->meta_description = $request->meta_description;
         $page->brief_description = $request->brief_description;
         $page->description = $request->description;
+        $page->serial_no = $request->serial_no;
+        $page->top_serial_no = $request->top_serial_no;
+        $page->bottom_serial_no = $request->bottom_serial_no;
+        $page->top_menu = $request->top_menu;
+        $page->bottom_menu = $request->bottom_menu;
         if ($request->hasFile('header_img')) {
             $fileName = time() . '-header-img-' . $request->file('header_img')->getClientOriginalName();
             $filePath = $request->file('header_img')->storeAs('uploads/pages', $fileName, 'public');

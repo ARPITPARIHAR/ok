@@ -31,11 +31,7 @@ class PageManagerController extends Controller
     $request->validate([
         'filename'      => 'required|string|max:255',
         'page_name'     => 'required|string|max:255',
-        'serial_no'     => 'required|integer',
-        'top_serial_no' => 'nullable|integer',
-        'bottom_serial_no' => 'nullable|integer',
-        'top_menu'      => 'nullable|string|max:255',
-        'bottom_menu'   => 'nullable|string|max:255',
+
         'content'       => 'nullable|string',
     ]);
 
@@ -43,11 +39,7 @@ class PageManagerController extends Controller
     $pageManager = new PageManager;
     $pageManager->filename = $request->filename;
     $pageManager->page_name = $request->page_name;
-    $pageManager->serial_no = $request->serial_no;
-    $pageManager->top_serial_no = $request->top_serial_no;
-    $pageManager->bottom_serial_no = $request->bottom_serial_no;
-    $pageManager->top_menu = $request->top_menu;
-    $pageManager->bottom_menu = $request->bottom_menu;
+   
     $pageManager->content = $request->content;
 
     // Save the PageManager instance to the database

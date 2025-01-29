@@ -140,7 +140,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">{{ __('Serial No.') }}</label>
                         <div class="col-sm-6">
-                            <input type="number" name="serial_no" value="{{ old('serial_no', $menu->serial_no) }}" class="form-control @error('serial_no') form-control-danger @enderror">
+                            <input type="number" name="serial_no" value="{{ old('serial_no', $page->serial_no) }}" class="form-control @error('serial_no') form-control-danger @enderror">
                             @error('serial_no')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror
@@ -151,7 +151,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">{{ __('Top Menu') }}</label>
                         <div class="col-sm-6">
-                            <input type="checkbox" name="top_menu" value="1" {{ old('top_menu', $menu->top_menu) ? 'checked' : '' }}>
+                            <input type="checkbox" name="top_menu" value="1" {{ old('top_menu', $page->top_menu) ? 'checked' : '' }}>
                         </div>
                     </div>
 
@@ -159,7 +159,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">{{ __('Top Serial No.') }}</label>
                         <div class="col-sm-6">
-                            <input type="number" name="top_serial_no" value="{{ old('top_serial_no', $menu->top_serial_no) }}" class="form-control @error('top_serial_no') form-control-danger @enderror">
+                            <input type="number" name="top_serial_no" value="{{ old('top_serial_no', $page->top_serial_no) }}" class="form-control @error('top_serial_no') form-control-danger @enderror">
                             @error('top_serial_no')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror
@@ -170,7 +170,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">{{ __('Bottom Menu') }}</label>
                         <div class="col-sm-6">
-                            <input type="checkbox" name="bottom_menu" value="1" {{ old('bottom_menu', $menu->bottom_menu) ? 'checked' : '' }}>
+                            <input type="checkbox" name="bottom_menu" value="1" {{ old('bottom_menu', $page->bottom_menu) ? 'checked' : '' }}>
                         </div>
                     </div>
 
@@ -178,7 +178,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">{{ __('Bottom Serial No.') }}</label>
                         <div class="col-sm-6">
-                            <input type="number" name="bottom_serial_no" value="{{ old('bottom_serial_no', $menu->bottom_serial_no) }}" class="form-control @error('bottom_serial_no') form-control-danger @enderror">
+                            <input type="number" name="bottom_serial_no" value="{{ old('bottom_serial_no', $page->bottom_serial_no) }}" class="form-control @error('bottom_serial_no') form-control-danger @enderror">
                             @error('bottom_serial_no')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror
@@ -204,7 +204,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">{{ __('Left Menu') }}</label>
                         <div class="col-sm-6">
-                            <input type="checkbox" name="left_menu" value="1" {{ old('left_menu', $menu->left_menu) ? 'checked' : '' }}>
+                            <input type="checkbox" name="left_menu" value="1" {{ old('left_menu', $page->left_menu) ? 'checked' : '' }}>
                         </div>
                     </div>
 
@@ -227,7 +227,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">{{ __('Left Serial No.') }}</label>
                         <div class="col-sm-6">
-                            <input type="number" name="left_serial_no" value="{{ old('left_serial_no', $menu->left_serial_no) }}" class="form-control @error('left_serial_no') form-control-danger @enderror">
+                            <input type="number" name="left_serial_no" value="{{ old('left_serial_no', $page->left_serial_no) }}" class="form-control @error('left_serial_no') form-control-danger @enderror">
                             @error('left_serial_no')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror
@@ -238,7 +238,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">{{ __('Right Menu') }}</label>
                         <div class="col-sm-6">
-                            <input type="checkbox" name="right_menu" value="1" {{ old('right_menu', $menu->right_menu) ? 'checked' : '' }}>
+                            <input type="checkbox" name="right_menu" value="1" {{ old('right_menu', $page->right_menu) ? 'checked' : '' }}>
                         </div>
                     </div>
 
@@ -261,7 +261,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">{{ __('Right Serial No.') }}</label>
                         <div class="col-sm-6">
-                            <input type="number" name="right_serial_no" value="{{ old('right_serial_no', $menu->right_serial_no) }}" class="form-control @error('right_serial_no') form-control-danger @enderror">
+                            <input type="number" name="right_serial_no" value="{{ old('right_serial_no', $page->right_serial_no) }}" class="form-control @error('right_serial_no') form-control-danger @enderror">
                             @error('right_serial_no')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror

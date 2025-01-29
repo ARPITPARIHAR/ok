@@ -60,7 +60,7 @@
                                     <label class="col-sm-2 col-form-label">{{ __('Existing Image') }}</label>
                                     <div class="col-sm-8">
                                         <img src="{{ asset($image) }}" alt="{{ $detail->title }}" class="img-thumbnail" width="150">
-                                        <input type="hidden" name="old_images[]" value="{{ $image }}">
+                                        <input type="hidden" name="thumbnail_img" value="{{ $image }}">
                                     </div>
                                     <div class="col-sm-2">
                                         <button type="button" class="btn btn-danger remove-image">{{ __('Remove') }}</button>

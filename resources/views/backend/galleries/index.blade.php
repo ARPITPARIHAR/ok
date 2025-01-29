@@ -38,15 +38,7 @@
                             @foreach ($details as $key=>$detail)
                             <tr>
                                 <td>{{ ($key+1) + ($details->currentPage() - 1)*$details->perPage() }}</td>
-                                <td>
-                                    @php
-                                        $images = json_decode($detail->image_paths,true);
-                                    @endphp
-                                    <img src="{{ asset($images[0] ?? '') }}" width="100">
-                                </td>
-                                <td>
-                                    {{ count($images) }}
-                                </td>
+                            
                                 <td>{{ $detail->title }}</td>
                                 <td>{{ date('d-m-Y h:iA', strtotime($detail->updated_at)) }}</td>
                                 <td>

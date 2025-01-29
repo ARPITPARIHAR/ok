@@ -315,35 +315,51 @@
 
 </style>
 
+<!-- jQuery (Required) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <section class="hm_glry">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="hm_glry_box">
-					<div class="head">
-						<h2>Photo Gallery</h2>
-						<hr>
-					</div>
-				</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hm_glry_box">
+                    <div class="head">
+                        <h2>Photo Gallery</h2>
+                        <hr>
+                    </div>
+                </div>
 
+                <!-- Owl Carousel -->
                 <div class="glry_slide owl-carousel owl-theme">
-                    @foreach(\App\Models\Gallery::all() as $service)
+                    @foreach(\App\Models\Gallery::all()->unique('images') as $service)
                         <div class="item">
                             <div class="tm_box">
-
-                                <a class="example-image-link" href="{{ asset($service->images) }}" data-lightbox="example-set">
-                                    
-                                    <img class="example-image" src="{{ asset($service->images) }}" alt="{{ $service->title }}">
+                                <a href="{{ asset('storage/' . str_replace('public/storage/', '', $service->images)) }}"
+                                   data-lightbox="gallery"
+                                   data-title="{{ $service->title }}">
+                                    <img class="example-image" src="{{ asset('storage/' . str_replace('public/storage/', '', $service->images)) }}" alt="{{ $service->title }}">
                                 </a>
                             </div>
                         </div>
                     @endforeach
                 </div>
             </div>
-		</div>
-	</div>
+        </div>
+    </div>
 </section>
+
+
+
+
+<!-- Custom CSS for Arrows -->
+
 
 <section class="hm_map">
 	<div class="container-fluid">

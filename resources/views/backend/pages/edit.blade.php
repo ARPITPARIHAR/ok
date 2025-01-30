@@ -190,9 +190,9 @@
                         <label class="col-sm-2 col-form-label">{{ __('Bottom Position') }}</label>
                         <div class="col-sm-6">
                             <select name="bottom_position" class="form-control @error('bottom_position') form-control-danger @enderror">
-                                <option value="None" {{ old('bottom_position', $menu->bottom_position) == 'None' ? 'selected' : '' }}>{{ __('None') }}</option>
-                                <option value="Left" {{ old('bottom_position', $menu->bottom_position) == 'Left' ? 'selected' : '' }}>{{ __('Left') }}</option>
-                                <option value="Right" {{ old('bottom_position', $menu->bottom_position) == 'Right' ? 'selected' : '' }}>{{ __('Right') }}</option>
+                                <option value="None" {{ old('bottom_position', $page->bottom_position) == 'None' ? 'selected' : '' }}>{{ __('None') }}</option>
+                                <option value="Left" {{ old('bottom_position', $page->bottom_position) == 'Left' ? 'selected' : '' }}>{{ __('Left') }}</option>
+                                <option value="Right" {{ old('bottom_position', $page->bottom_position) == 'Right' ? 'selected' : '' }}>{{ __('Right') }}</option>
                             </select>
                             @error('bottom_position')
                                 <p class="text-danger">{{ $message }}</p>
@@ -213,9 +213,9 @@
                         <label class="col-sm-2 col-form-label">{{ __('Left Position') }}</label>
                         <div class="col-sm-6">
                             <select name="left_position" class="form-control @error('left_position') form-control-danger @enderror">
-                                <option value="None" {{ old('left_position', $menu->left_position) == 'None' ? 'selected' : '' }}>{{ __('None') }}</option>
-                                <option value="Top" {{ old('left_position', $menu->left_position) == 'Top' ? 'selected' : '' }}>{{ __('Top') }}</option>
-                                <option value="Bottom" {{ old('left_position', $menu->left_position) == 'Bottom' ? 'selected' : '' }}>{{ __('Bottom') }}</option>
+                                <option value="None" {{ old('left_position', $page->left_position) == 'None' ? 'selected' : '' }}>{{ __('None') }}</option>
+                                <option value="Top" {{ old('left_position', $page->left_position) == 'Top' ? 'selected' : '' }}>{{ __('Top') }}</option>
+                                <option value="Bottom" {{ old('left_position', $page->left_position) == 'Bottom' ? 'selected' : '' }}>{{ __('Bottom') }}</option>
                             </select>
                             @error('left_position')
                                 <p class="text-danger">{{ $message }}</p>
@@ -247,9 +247,9 @@
                         <label class="col-sm-2 col-form-label">{{ __('Right Position') }}</label>
                         <div class="col-sm-6">
                             <select name="right_position" class="form-control @error('right_position') form-control-danger @enderror">
-                                <option value="None" {{ old('right_position', $menu->right_position) == 'None' ? 'selected' : '' }}>{{ __('None') }}</option>
-                                <option value="Top" {{ old('right_position', $menu->right_position) == 'Top' ? 'selected' : '' }}>{{ __('Top') }}</option>
-                                <option value="Bottom" {{ old('right_position', $menu->right_position) == 'Bottom' ? 'selected' : '' }}>{{ __('Bottom') }}</option>
+                                <option value="None" {{ old('right_position', $page->right_position) == 'None' ? 'selected' : '' }}>{{ __('None') }}</option>
+                                <option value="Top" {{ old('right_position', $page->right_position) == 'Top' ? 'selected' : '' }}>{{ __('Top') }}</option>
+                                <option value="Bottom" {{ old('right_position', $page->right_position) == 'Bottom' ? 'selected' : '' }}>{{ __('Bottom') }}</option>
                             </select>
                             @error('right_position')
                                 <p class="text-danger">{{ $message }}</p>

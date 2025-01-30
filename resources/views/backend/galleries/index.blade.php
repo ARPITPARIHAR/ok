@@ -38,7 +38,7 @@
                             <tr>
                                 <td>{{ ($key+1) + ($details->currentPage() - 1)*$details->perPage() }}</td>
 
-                                <td><img src="{{ ($detail->thumbnail_img) }}" width="90"></td>
+                                <td><img src="{{ ($detail->images) }}" width="90"></td>
 
                                 <td>{{ date('d-m-Y h:iA', strtotime($detail->updated_at)) }}</td>
                                 <td>

@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
-<link rel="stylesheet" type="text/css" href="css/lightbox.css">
-<link rel="stylesheet" type="text/css" href="css/custom.css">
-<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/owl.carousel.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/owl.theme.default.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/lightbox.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/custom.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
 
 <title>The Dausa Central Co-Oprative Bank</title>
         @yield('style')
@@ -22,12 +22,12 @@
     @include('frontend.includes.footer')
 
 @yield('script')
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.matchHeight.js"></script>
-<script src="js/lightbox-plus-jquery.min.js"></script>
-<script src="js/owl.carousel.js"></script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/popper.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/jquery.matchHeight.js')}}"></script>
+<script src="{{asset('js/lightbox-plus-jquery.min.js')}}"></script>
+<script src="{{asset('js/owl.carousel.js')}}"></script>
 
 
 <script>

@@ -14,12 +14,12 @@
 				<div class="links">
 					<h3>Quick Links</h3>
 					<ul>
-						<li><a href="#"><img src="images/arow.png" alt="arow"> About Us</a></li>
-						<li><a href="#"><img src="images/arow.png" alt="arow"> Services</a></li>
-						<li><a href="#"><img src="images/arow.png" alt="arow"> Branches</a></li>
-						<li><a href="#"><img src="images/arow.png" alt="arow"> Policies & Guidelines</a></li>
-						<li><a href="#"><img src="images/arow.png" alt="arow"> Photo Gallery</a></li>
-						<li><a href="#"><img src="images/arow.png" alt="arow"> Contact Us</a></li>
+						<li><a href="#"><img src="{{ asset('images/arow.png') }}" alt="arow"> About Us</a></li>
+						<li><a href="#"><img src="{{ asset('images/arow.png') }}" alt="arow"> Services</a></li>
+						<li><a href="#"><img src="{{ asset('images/arow.png') }}" alt="arow"> Branches</a></li>
+						<li><a href="#"><img src="{{ asset('images/arow.png') }}" alt="arow"> Policies & Guidelines</a></li>
+						<li><a href="#"><img src="{{ asset('images/arow.png') }}" alt="arow"> Photo Gallery</a></li>
+						<li><a href="#"><img src="{{ asset('images/arow.png') }}" alt="arow"> Contact Us</a></li>
 					</ul>
 				</div>
 			</div>

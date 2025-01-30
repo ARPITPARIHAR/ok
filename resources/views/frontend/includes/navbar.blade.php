@@ -66,7 +66,10 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ $page->id }}">
                     @foreach($page->children as $child)
                         <li>
-                            <a class="dropdown-item" href="{{ url('page/' . Str::slug($child->name)) }}">
+                            <a class="dropdown-item" href="{{ route('page.show', ['slug' => Str::slug($child->name)]) }}">
+                                {{ $child->name }}
+                            </a>
+
                                 {{ $child->name }}
                             </a>
                         </li>

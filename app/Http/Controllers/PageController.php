@@ -10,8 +10,6 @@ use App\Models\Relive;
 use App\Models\Tender;
 use Illuminate\Http\Request;
 use App\Models\Trainingevent;
-use Illuminate\Support\Str;
-
 
 class PageController extends Controller
 {
@@ -33,13 +31,20 @@ class PageController extends Controller
         return view('frontend.infastructure');
     }
 
+    public function mission(Request $request)
+    {
+        return view('frontend.mission');
+    }
 
     public function contact_us(Request $request)
     {
         return view('frontend.contact');
     }
 
-
+    public function hostel_facility(Request $request)
+    {
+        return view('frontend.hostel');
+    }
 
     public function about(Request $request)
     {
@@ -63,28 +68,64 @@ class PageController extends Controller
         }
     }
 
-  
+    public function tenders(Request $request)
+    {
+        return view('frontend.tenders');
+    }
+
+    public function placementservice(Request $request)
+    {
+        return view('frontend.placementservice');
+    }
+
     public function boardofdirectory(Request $request)
     {
         return view('frontend.boardofdirectory');
     }
-
-
-
-    public function show($slug)
+    public function teamofmember(Request $request)
     {
-        $page = Page::where('name', 'like', str_replace('-', ' ', $slug))->firstOrFail();
-
-
-        $viewName = 'pages.' . Str::slug($slug);
-
-        if (view()->exists($viewName)) {
-            return view($viewName, compact('page'));
-        }
-
-
-        return view('pages.show', compact('page'));
+        return view('frontend.teammember');
+    }
+    public function traningprogramme(Request $request)
+    {
+        return view('frontend.traningprogramme');
+    }
+    public function studymaterial(Request $request)
+    {
+        return view('frontend.studymaterial');
+    }
+    public function relivingorders(Request $request)
+    {
+        return view('frontend.relivingorders');
+    }
+    public function feedback(Request $request)
+    {
+        return view('frontend.feedback');
     }
 
 
+    public function training_show($id)
+    {
+
+        $trainingEvents = Trainingevent::where('category_id', $id)->get();
+        return view('frontend.show', compact('trainingEvents'));
+    }
+    public function reliving_show($id)
+    {
+        $trainingEvents = Relive::where('category_id', $id)->get();
+        return view('frontend.relivingshow', compact('trainingEvents'));
+    }
+
+
+ public function show($slug)
+{
+    $page = Page::where('slug', $slug)->firstOrFail();
+    return view('frontend.page', compact('page'));
+}
+
+    public function managementDetail($slug)
+    {
+        $management = Management::where('slug', $slug)->first();
+        return view('frontend.management-detail', compact('management'));
+    }
 }

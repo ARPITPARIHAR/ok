@@ -1,4 +1,4 @@
-{{-- @extends('frontend.layouts.app')
+@extends('frontend.layouts.app')
 @section('meta_title','Vision | '.env('APP_NAME'))
 @section('meta_description','Vision | '.env('APP_NAME'))
 @section('content')
@@ -6,7 +6,7 @@
 
 
 
-<section class="inner_banner">
+{{-- <section class="inner_banner">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 no_padding">
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 
@@ -47,4 +47,4 @@
 @section('script')
 
 @endsection
- --}}
+

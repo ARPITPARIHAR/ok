@@ -39,22 +39,7 @@
                             @enderror
                         </div>
                     </div> --}}
-                    <div id="image-fields">
-                        @if($images)
-                            @foreach($images as $image)
-                                <div class="form-group row image-field">
-                                    <label class="col-sm-2 col-form-label">{{ __('Existing Image') }}</label>
-                                    <div class="col-sm-8">
-                                        <img src="{{ asset($image) }}" alt="{{ $detail->title }}" class="img-thumbnail" width="150">
-                                        <input type="hidden" name="thumbnail_img" value="{{ $image }}">
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <button type="button" class="btn btn-danger remove-image">{{ __('Remove') }}</button>
-                                    </div>
-                                </div>
-                            @endforeach
-                        @endif
-                    </div>
+                 
 
 
                         <div class="form-group row image-field">

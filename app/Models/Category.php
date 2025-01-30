@@ -7,6 +7,6 @@ class Category extends Model
 {
     public function subcategories()
     {
-        return $this->hasMany(\App\Models\Subcategory::class); // Ensure the namespace is correct
+        return $this->hasMany(\App\Models\SubCategory::class); // Ensure the namespace is correct
     }
 }

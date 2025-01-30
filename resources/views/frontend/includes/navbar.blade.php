@@ -70,7 +70,7 @@
                                 {{ $child->name }}
                             </a>
 
-                               
+
                             </a>
                         </li>
                     @endforeach
@@ -79,6 +79,7 @@
         </li>
     @endforeach
 </ul>
+<li class="nav-item"><a class="nav-link" href="/branches">Branches</a></li>
 
 
                                         @foreach (\App\Models\Category::with(['subcategories', 'subcategories.banners'])->get() as $category)

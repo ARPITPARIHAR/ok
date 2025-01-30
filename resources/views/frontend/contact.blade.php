@@ -18,7 +18,7 @@
 							</div>
 							<div class="cntct_txt">
 								<h4>Phone Number</h4>
-								<p>  <a href="tel:+91-1427-294181">{{ businessSetting(1)->contact_numbers ?? 'Not Available' }}</a></p>
+								<p>  {{ businessSetting(1)->contact_numbers ?? 'Not Available' }}</a></p>
 							</div>
 						</div>
 
@@ -28,7 +28,7 @@
 							</div>
 							<div class="cntct_txt">
 								<h4>Email ID</h4>
-                                <p><a href="mailto:dccb.dausa@rajasthan.gov.in">{{businessSetting(1)->email}}</a>
+                                <p>{{businessSetting(1)->email}}</a>
 								</p>
 							</div>
 						</div>

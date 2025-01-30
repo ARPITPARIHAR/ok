@@ -67,11 +67,10 @@
                     @foreach($page->children as $child)
                         <li>
                             <a class="dropdown-item" href="{{ route('page.show', ['slug' => Str::slug($child->name)]) }}">
-                                {{ $child->name }}
+
                             </a>
 
-                                {{ $child->name }}
-                            </a>
+                            
                         </li>
                     @endforeach
                 </ul>

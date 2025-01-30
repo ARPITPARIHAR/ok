@@ -1,4 +1,4 @@
-<footer>
+<footer style="background: url('{{ asset('images/ftr_bg.jpg') }}') no-repeat center center; background-size: cover;">
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-4 col-lg-12 col-md-12">
@@ -13,14 +13,16 @@
 			<div class="col-xl-4 col-lg-6 col-md-12">
 				<div class="links">
 					<h3>Quick Links</h3>
-					<ul>
-						<li><a href="#"><img src="{{ asset('images/arow.png') }}" alt="arow"> About Us</a></li>
-						<li><a href="#"><img src="{{ asset('images/arow.png') }}" alt="arow"> Services</a></li>
-						<li><a href="#"><img src="{{ asset('images/arow.png') }}" alt="arow"> Branches</a></li>
-						<li><a href="#"><img src="{{ asset('images/arow.png') }}" alt="arow"> Policies & Guidelines</a></li>
-						<li><a href="#"><img src="{{ asset('images/arow.png') }}" alt="arow"> Photo Gallery</a></li>
-						<li><a href="#"><img src="{{ asset('images/arow.png') }}" alt="arow"> Contact Us</a></li>
-					</ul>
+                    <ul>
+                        @foreach(\App\Models\Page::where('parent_id', '!=', 0)->orderBy('position', 'asc')->get() as $page)
+                            <li>
+                                <a href="{{ route('page.show', ['slug' => $page->slug]) }}">
+                                    <img src="{{ asset('images/arow.png') }}" alt="arow"> {{ $page->name }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+
 				</div>
 			</div>
 			<div class="col-xl-4 col-lg-6 col-md-12">

@@ -9,7 +9,7 @@
 		<div class="row">
 			<div class="col-md-12 no_padding">
 				<div class="inr_bnr">
-					<img src="{{asset($page->header_img)}}" alt="{{ $page->title }}">
+					<img src="{{($page->header_img)}}" alt="{{ $page->title }}">
 				</div>
 			</div>
 		</div>

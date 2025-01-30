@@ -29,7 +29,7 @@
 					<div class="adrs">
 						<div class="adrs_box">
 							<div class="adrs_inr">
-								<div class="adrs_icn"><img src="images/adrs01.png" alt="adrs"></div>
+								<div class="adrs_icn"><img src="{{ asset(images/adrs01.png)}}" alt="adrs"></div>
 							</div>
 							<p>
 
@@ -40,7 +40,7 @@
 						</div>
 						<div class="adrs_box">
 							<div class="adrs_inr">
-								<div class="adrs_icn"><img src="images/adrs02.png" alt="adrs"></div>
+								<div class="adrs_icn"><img src="{{ asset(images/adrs02.png)}}" alt="adrs"></div>
 							</div>
 							<p>
 								<a href="mailto:dccb.dausa@rajasthan.gov.in">{{businessSetting(1)->email}}</a>
@@ -48,7 +48,7 @@
 						</div>
 						<div class="adrs_box">
 							<div class="adrs_inr">
-								<div class="adrs_icn"><img src="images/adrs03.png" alt="adrs"></div>
+								<div class="adrs_icn"><img src="{{ asset(images/adrs03.png)}}" alt="adrs"></div>
 							</div>
 							<p>{{businessSetting(1)->address}}</p>
 						</div>

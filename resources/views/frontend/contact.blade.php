@@ -18,16 +18,18 @@
 							</div>
 							<div class="cntct_txt">
 								<h4>Phone Number</h4>
-								<p>+91-1427-294181</p>
+								<p>  <a href="tel:+91-1427-294181">{{ businessSetting(1)->contact_numbers ?? 'Not Available' }}</a></p>
 							</div>
 						</div>
+
 						<div class="cntct_box">
 							<div class="cntct_inr">
 								<span><img src="images/cntct002.png" alt="mail"></span>
 							</div>
 							<div class="cntct_txt">
 								<h4>Email ID</h4>
-								<p>dccb.dausa@rajasthan.gov.in</p>
+                                <p><a href="mailto:dccb.dausa@rajasthan.gov.in">{{businessSetting(1)->email}}</a>
+								</p>
 							</div>
 						</div>
 						<div class="cntct_box">
@@ -36,7 +38,7 @@
 							</div>
 							<div class="cntct_txt">
 								<h4>Adress</h4>
-								<p>Sahkar Bhawan, Khan Bhakari Road, Dausa - 303303(RAJ.)</p>
+                                <p>{{businessSetting(1)->address}}</p>
 							</div>
 						</div>
 					</div>

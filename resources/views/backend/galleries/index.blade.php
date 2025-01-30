@@ -28,8 +28,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>{{ __('Images') }}</th>
-                                <th>{{ __('Total Image') }}</th>
-                                <th>{{ __('Title') }}</th>
+
                                  <th>{{ __('Updated At') }}</th>
                                 <th>{{ __('Actions') }}</th>
                             </tr>
@@ -38,8 +37,9 @@
                             @foreach ($details as $key=>$detail)
                             <tr>
                                 <td>{{ ($key+1) + ($details->currentPage() - 1)*$details->perPage() }}</td>
-                            
-                                <td>{{ $detail->title }}</td>
+
+                                <td><img src="{{ ($detail->thumbnail_img) }}" width="90"></td>
+
                                 <td>{{ date('d-m-Y h:iA', strtotime($detail->updated_at)) }}</td>
                                 <td>
                                     <a href="{{ route('galleries.edit',encrypt($detail->id)) }}" class="btn btn-sm btn-primary">{{ __('Edit') }}</a>
@@ -52,8 +52,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>{{ __('Images') }}</th>
-                                <th>{{ __('Total Image') }}</th>
-                                <th>{{ __('Title') }}</th>
+
                                 <th>{{ __('Updated At') }}</th>
                                 <th>{{ __('Actions') }}</th>
                             </tr>

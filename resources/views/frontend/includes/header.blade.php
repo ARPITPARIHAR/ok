@@ -1,11 +1,17 @@
 <section class="main_banner">
 	<div class="container-fluid">
 		<div class="row">
+            @php
+            $sliders = \App\Models\Slider::all();
+        @endphp
+        @foreach($sliders as $slider)
 			<div class="col-md-12 no_padding">
 				<div class="mn_bnr">
-					<img src="images/mn_bnr.jpg" alt="bnr">
+                    <img src="{{ ($slider->thumbnail_img) }}" alt="srvc_icn">
+			
 				</div>
 			</div>
+            @endforeach
 		</div>
 	</div>
 </section>

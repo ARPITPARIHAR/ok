@@ -13,13 +13,13 @@
                     <span class="pcoded-mtext">{{ __('Pages') }}</span>
                 </a>
             </li>
-
+{{-- 
             <li class="{{ areActiveRoutes(['pagemanager.index','pagemanager.create','pagemanager.edit']) }}">
                 <a href="{{ route('pagemanager.index') }}">
                     <span class="pcoded-micon"><i class="feather icon-file"></i></span>
                     <span class="pcoded-mtext">{{ __('Page Manager') }}</span>
                 </a>
-            </li>
+            </li> --}}
 
             <li class="{{ areActiveRoutes(['sliders.index','sliders.create','sliders.edit']) }}">
                 <a href="{{ route('sliders.index') }}">

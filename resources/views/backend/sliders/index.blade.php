@@ -37,7 +37,7 @@
                             @foreach ($sliders as $key => $slider)
                             <tr>
                                 <td>{{ ($key+1) + ($sliders->currentPage() - 1) * $sliders->perPage() }}</td>
-                                <td><img src="{{ asset($slider->thumbnail_img) }}" width="150"></td>
+                                <td><img src="{{($slider->thumbnail_img) }}" width="150"></td>
 
                                 <td>{{ date('d-m-Y h:iA', strtotime($slider->updated_at)) }}</td>
                                 <td>
@@ -51,7 +51,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>{{ __('Image') }}</th>
-                            
+
                                 <th>{{ __('Updated At') }}</th>
                                 <th>{{ __('Actions') }}</th>
                             </tr>

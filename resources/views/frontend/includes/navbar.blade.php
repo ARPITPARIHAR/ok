@@ -24,26 +24,7 @@
                                         <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
                                             <button onclick="sdbr_close()" class="close">&times;</button>
 
-                                            {{-- @foreach (App\Models\Page::where('parent_id', 0)->get() as $page)
-                                                <li class="nav-item dropdown">
-                                                    <a class="nav-link @if($page->count() > 0) dropdown-toggle @endif" href="#"
-                                                    id="navbarDropdown{{ $page->id }}"
-                                                    role="button"
-                                                    data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                        {{ $page->name }}
-                                                    </a>
 
-                                                    <!-- Dynamic Subcategories -->
-                                                    {{-- @if ($category->subcategories->count() > 0)
-                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ $category->id }}">
-                                                            @foreach ($category->subcategories as $subcategory)
-                                                                <li><a class="dropdown-item" href="#">{{ $subcategory->name }}</a></li>
-                                                            @endforeach
-                                                        </ul>
-                                                    @endif --}}
-
-                                            {{-- @endforeach --}} --
 
                                             <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
   @php
@@ -130,7 +111,7 @@
 </header>
 
 <style>
-/* Submenu visibility */
+
 .dropdown-submenu {
   position: relative;
 }

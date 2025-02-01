@@ -102,6 +102,10 @@ class PageController extends Controller
     {
         return view('frontend.feedback');
     }
+    public function branches(Request $request)
+    {
+        return view('frontend.branches');
+    }
 
 
     public function training_show($id)

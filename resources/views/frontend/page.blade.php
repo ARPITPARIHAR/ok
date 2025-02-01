@@ -22,7 +22,8 @@
 			<div class="col-lg-12">
 				<div class="head">
 					<h2>{{ $page->title }}</h2>
-                    <p>{!! $page->description !!}</p>
+                    <p>{!! $page->brief_description !!}</p>
+                    <img src="{{($page->thumbnail_img)}}" alt="{{ $page->title }}">
 				</div>
 			</div>
 

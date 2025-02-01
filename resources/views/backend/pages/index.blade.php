@@ -14,7 +14,7 @@
 @section('content')
 <div class="row">
     <div class="col-sm-12">
-        <!-- Zero config.table start -->
+        
         <div class="card">
             <div class="card-header row">
                 <div class="col-sm-2">
@@ -54,8 +54,9 @@
                                     <a onclick="copyToClipboard('{{ route('page.show',$page->slug) }}','{{encrypt($page->id)}}')" href="#">{{ route('page.show',$page->slug) }}</a>
                                     <p class="text-muted" id="copyed-text-{{encrypt($page->id)}}"></p>
                                 </td>
-                                <td><img src="{{ asset($page->header_img) }}" width="150"></td>
-                                {{-- <td>{{ $page->slug }}</td> --}}
+
+                                <td><img src="{{ ($page->header_img) }}" width="150"></td>
+
                                 <td>{{ date('d-m-Y h:iA',strtotime($page->updated_at)) }}</td>
                                 <td>
                                     <a href="{{ route('admin.pages.edit',encrypt($page->id)) }}" class="btn btn-sm btn-primary">{{ __('Edit') }}</a>

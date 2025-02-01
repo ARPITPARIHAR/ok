@@ -40,7 +40,7 @@
                                 <td>{{ ($key+1) + ($banners->currentPage() - 1)*$banners->perPage() }}</td>
                                 <td>{{ $banner->subcategory_name }}</td>
 
-                                <td><img src="{{ asset($banner->thumbnail_img) }}" width="90"></td>
+                                <td><img src="{{($banner->thumbnail_img) }}" width="90"></td>
                                 <td>{{ date('d-m-Y h:iA',strtotime($banner->updated_at)) }}</td>
                                 <td>
                                     <a href="{{ route('banner.edit',encrypt($banner->id)) }}" class="btn btn-sm btn-primary">{{ __('Edit') }}</a>

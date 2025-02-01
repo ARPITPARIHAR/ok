@@ -29,6 +29,7 @@ Route::controller(PageController::class)->group(function () {
     Route::get('contact', 'contact_us')->name('contact_us');
     Route::get('gallery', 'gallery')->name('gallery');
     Route::get('abouts', 'about')->name('abouts');
+    Route::get('branches', 'branches')->name('branches');
 
 
 });

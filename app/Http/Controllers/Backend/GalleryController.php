@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
-
+use Illuminate\Support\Str;
 class GalleryController extends Controller
 {
     public function index()
@@ -29,6 +29,13 @@ class GalleryController extends Controller
 
         $detail = new Gallery;
         $detail->title = $request->title;
+        $detail->slug = Str::slug($request->title); // ✅ Generate slug from title
+
+        // Ensure the slug is unique
+        $count = Gallery::where('slug', $detail->slug)->count();
+        if ($count > 0) {
+            $detail->slug .= '-' . ($count + 1);
+        }
 
         // Handle multiple images
         if ($request->hasFile('images')) {

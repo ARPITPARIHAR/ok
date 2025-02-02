@@ -27,7 +27,7 @@
                                 <th>#</th>
                                 <th>{{ __('Category') }}</th>
                                 <th>{{ __('Serial No.') }}</th>
-                                <th>{{ __('Status') }}</th>
+                                {{-- <th>{{ __('Status') }}</th> --}}
                                 <th>{{ __('Actions') }}</th>
                               <th>{{ __('Sub Category') }}</th>
                             </tr>
@@ -39,14 +39,14 @@
 
                                 <td>{{ $category->name }}</td>
                                 <td>{{ $category->serial_no }}</td>
-                                <td>
+                                {{-- <td>
                                     <form action="{{ route('categories.toggle', $category->id) }}" method="POST">
                                         @csrf
                                         <button type="submit" class="btn btn-sm btn-{{ $category->active ? 'success' : 'danger' }}">
                                             {{ $category->active ? __('Active') : __('Inactive') }}
                                         </button>
                                     </form>
-                                </td>
+                                </td> --}}
                                 <td>
                                     <a href="{{ route('categories.edit',  encrypt($category->id)) }}" class="btn btn-sm btn-primary">{{ __('Edit') }}</a>
                                     <a href="{{ route('categories.destroy', encrypt($category->id))}}"class="btn btn-sm btn-danger">{{ __('Delete') }}</a>

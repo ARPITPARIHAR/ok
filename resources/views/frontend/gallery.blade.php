@@ -14,7 +14,7 @@
                 <div class="col-lg-3">
                     <a href="{{ route('gallery.detail', $item->slug) }}">
                         <div class="glry_box">
-                            @php
+                            @php"
                                 $images = json_decode($item->image_paths);
                             @endphp
                             @if($images && count($images) > 0)

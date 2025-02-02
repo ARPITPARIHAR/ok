@@ -8,7 +8,7 @@
 			<div class="col-md-12 no_padding">
 				<div class="mn_bnr">
                     <img src="{{ ($slider->thumbnail_img) }}" alt="srvc_icn">
-			
+
 				</div>
 			</div>
             @endforeach
@@ -343,22 +343,29 @@
                 </div>
 
                 <!-- Owl Carousel -->
-                <div class="glry_slide owl-carousel owl-theme">
-                    @foreach(\App\Models\Gallery::all()->unique('images') as $service)
-                        <div class="item">
-                            <div class="tm_box">
-                                <a href="{{ asset('storage/' . str_replace('public/storage/', '', $service->images)) }}"
-                                   data-lightbox="gallery"
-                                   data-title="{{ $service->title }}">
-                                    <img class="example-image" src="{{ asset('storage/' . str_replace('public/storage/', '', $service->images)) }}" alt="{{ $service->title }}">
-                                </a>
-                            </div>
+
+                @foreach(\App\Models\Gallery::latest()->take(4)->get() as $item)
+                <div class="col-lg-3">
+                    <a href="{{ route('gallery.detail', $item->slug) }}">
+                        <div class="glry_box">
+                            @php
+                                $images = json_decode($item->image_paths);
+                            @endphp
+                            @if($images && count($images) > 0)
+                                <div class="glry_imag">
+                                    <img class="example-image" src="{{ $images[0] }}" alt="{{ $item->title }}" />
+                                </div>
+                            @endif
+                            <h4>{{ $item->title }}</h4>
                         </div>
-                    @endforeach
+                    </a>
+                </div>
+            @endforeach
+
                 </div>
             </div>
         </div>
-    </div>
+
 </section>
 
 

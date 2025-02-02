@@ -94,31 +94,14 @@ class PageController extends Controller
     {
         return view('frontend.studymaterial');
     }
-    public function relivingorders(Request $request)
-    {
-        return view('frontend.relivingorders');
-    }
-    public function feedback(Request $request)
-    {
-        return view('frontend.feedback');
-    }
+   
     public function branches(Request $request)
     {
         return view('frontend.branches');
     }
 
 
-    public function training_show($id)
-    {
 
-        $trainingEvents = Trainingevent::where('category_id', $id)->get();
-        return view('frontend.show', compact('trainingEvents'));
-    }
-    public function reliving_show($id)
-    {
-        $trainingEvents = Relive::where('category_id', $id)->get();
-        return view('frontend.relivingshow', compact('trainingEvents'));
-    }
 
 
  public function show($slug)

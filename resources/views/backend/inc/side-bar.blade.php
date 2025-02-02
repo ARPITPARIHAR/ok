@@ -13,7 +13,7 @@
                     <span class="pcoded-mtext">{{ __('Pages') }}</span>
                 </a>
             </li>
-{{-- 
+{{--
             <li class="{{ areActiveRoutes(['pagemanager.index','pagemanager.create','pagemanager.edit']) }}">
                 <a href="{{ route('pagemanager.index') }}">
                     <span class="pcoded-micon"><i class="feather icon-file"></i></span>
@@ -64,6 +64,12 @@
                 <a href="{{ route('ourservices.index') }}">
                     <span class="pcoded-micon"><i class="feather icon-file"></i></span>
                     <span class="pcoded-mtext">{{ __('Our Services') }}</span>
+                </a>
+            </li>
+            <li class="{{ areActiveRoutes(['branches.index','branches.create','branches.edit']) }}">
+                <a href="{{ route('branches.index') }}">
+                    <span class="pcoded-micon"><i class="feather icon-file"></i></span>
+                    <span class="pcoded-mtext">{{ __('Branches') }}</span>
                 </a>
             </li>
 

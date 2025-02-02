@@ -26,7 +26,7 @@
             <div class="card-block">
                 <form action="{{ route('galleries.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    {{-- <div class="form-group row">
+                    <div class="form-group row">
                         <label class="col-sm-2 col-form-label">{{ __('Title') }}</label>
                         <div class="col-sm-10">
                             <input type="text" name="title" id="title" value="{{ old('title') }}" placeholder="{{ __('Enter Title') }}" class="form-control @error('title') form-control-danger @enderror">
@@ -34,12 +34,12 @@
                                 <p class="text-danger error">{{ $message }}</p>
                             @enderror
                         </div>
-                    </div> --}}
+                    </div>
                     <div id="image-fields">
                         <div class="form-group row image-field">
                             <label class="col-sm-2 col-form-label">{{ __('Images') }}</label>
                             <div class="col-sm-10">
-                                <input type="file" name="thumbnail_img" class="form-control @error('images') form-control-danger @enderror">
+                                <input type="file" name="images[]" class="form-control @error('images') form-control-danger @enderror">
                                 @error('images')
                                     <p class="text-danger error">{{ $message }}</p>
                                 @enderror

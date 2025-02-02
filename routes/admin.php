@@ -22,7 +22,7 @@ use App\Http\Controllers\Backend\MissionController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\FeedbackController;
 use App\Http\Controllers\Backend\RelivingController;
-use App\Http\Controllers\Backend\TrainingController;
+use App\Http\Controllers\Backend\BranchController;
 use App\Http\Controllers\Backend\UpcomingController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\ManagementController;
@@ -94,8 +94,8 @@ Route::controller(TeammemberController::class)->group(function () {
 
 
 // Teammember routes
-Route::controller(TrainingController::class)->group(function () {
-    Route::group(['prefix' => 'training', 'as' => 'training.'], function () {
+Route::controller(BranchController::class)->group(function () {
+    Route::group(['prefix' => 'branches', 'as' => 'branches.'], function () {
         Route::get('/', 'index')->name('index');
         Route::get('create', 'create')->name('create');
         Route::post('store', 'store')->name('store');
@@ -169,16 +169,7 @@ Route::controller(PageManagerController::class)->group(function () {
 
 
 // Hotelservice routes
-Route::controller(HostelserviceController::class)->group(function () {
-    Route::group(['prefix' => 'hostelfacility', 'as' => 'hostelfacility.'], function () {
-        Route::get('/', 'index')->name('index');
-        Route::get('create', 'create')->name('create');
-        Route::post('store', 'store')->name('store');
-        Route::get('{id}/edit', 'edit')->name('edit');
-        Route::post('{id}/edit', 'update')->name('update');
-        Route::get('{id}/delete', 'destroy')->name('delete');
-    });
-});
+
 
 
 // Banner routes
@@ -208,38 +199,8 @@ Route::controller(BottomBannerController::class)->group(function () {
 });
 
 
-Route::controller(Trainingeventcontroller::class)->group(function () {
-    Route::group(['prefix' => 'trainingevent', 'as' => 'trainingevent.'], function () {
-        Route::get('/', 'index')->name('index');
-        Route::get('create', 'create')->name('create');
-        Route::post('store', 'store')->name('store');
-        Route::get('{id}/edit', 'edit')->name('edit');
-        Route::post('{id}/edit', 'update')->name('update');
-        Route::get('{id}/delete', 'destroy')->name('delete');
-    });
-});
 
-Route::controller(VisionController::class)->group(function () {
-    Route::group(['prefix' => 'visions', 'as' => 'visions.'], function () {
-        Route::get('/', 'index')->name('index');
-        Route::get('create', 'create')->name('create');
-        Route::post('store', 'store')->name('store');
-        Route::get('{id}/edit', 'edit')->name('edit');
-        Route::post('{id}/edit', 'update')->name('update');
-        Route::get('{id}/delete', 'destroy')->name('delete');
-    });
-});
 
-Route::controller(MissionController::class)->group(function () {
-    Route::group(['prefix' => 'missions', 'as' => 'missions.'], function () {
-        Route::get('/', 'index')->name('index');
-        Route::get('create', 'create')->name('create');
-        Route::post('store', 'store')->name('store');
-        Route::get('{id}/edit', 'edit')->name('edit');
-        Route::post('{id}/edit', 'update')->name('update');
-        Route::get('{id}/delete', 'destroy')->name('delete');
-    });
-});
 Route::controller(AboutController::class)->group(function () {
     Route::group(['prefix' => 'about', 'as' => 'about.'], function () {
         Route::get('/', 'index')->name('index');

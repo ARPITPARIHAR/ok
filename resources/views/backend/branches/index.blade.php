@@ -43,7 +43,7 @@
                                 <td>{{ ($key+1) + ($boards->currentPage() - 1)*$boards->perPage() }}</td>
                                 <td>{{ $board->title }}</td>
 
-                                <td><img src="{{ asset($board->thumbnail_img) }}" width="90"></td>
+                                <td><img src="{{ ($board->thumbnail_img) }}" width="90"></td>
 
                                 <td>    {!! $board->brief_description !!}</td>
 

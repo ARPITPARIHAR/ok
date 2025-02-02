@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-6 no_padding">
                 <div class="hm_abt_imag">
-                    <img src="{{ ('images/' . $branch->header_image) }}" alt="{{ $branch->title }}" class="img-fluid">
+                    <img src="{{ ('' . $branch->header_image) }}" alt="{{ $branch->title }}" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6">

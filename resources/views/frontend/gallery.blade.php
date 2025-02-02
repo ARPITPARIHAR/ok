@@ -19,7 +19,7 @@
                             @endphp
                             @if($images && count($images) > 0)
                                 <div class="glry_imag">
-                                    <img class="example-image" src="{{ asset($images[0]) }}" alt="{{ $item->title }}" />
+                                    <img class="example-image" src="{{ ($images[0]) }}" alt="{{ $item->title }}" />
                                 </div>
                             @endif
                             <h4>{{ $item->title }}</h4>

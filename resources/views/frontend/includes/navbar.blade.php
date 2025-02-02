@@ -60,7 +60,7 @@
         </li>
     @endforeach
 </ul>
-<li class="nav-item"><a class="nav-link" href="/branches">Branches</a></li>
+<li class="nav-item"><a class="nav-link" href="/branch">Branches</a></li>
 
 
                                         @foreach (\App\Models\Category::with(['subcategories', 'subcategories.banners'])->get() as $category)

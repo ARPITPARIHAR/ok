@@ -42,7 +42,7 @@
                                     @php
                                         $images = json_decode($detail->image_paths,true);
                                     @endphp
-                                    <img src="{{ asset($images[0] ?? '') }}" width="100">
+                                    <img src="{{ ($images[0] ?? '') }}" width="100">
                                 </td>
                                 <td>
                                     {{ count($images) }}

@@ -244,16 +244,6 @@ Route::controller(GalleryController::class)->group(function () {
         Route::get('{id}/delete', 'destroy')->name('delete');
     });
 });
-Route::controller(RelivingController::class)->group(function () {
-    Route::group(['prefix' => 'relieve', 'as' => 'relieve.'], function () {
-        Route::get('/', 'index')->name('index');
-        Route::get('create', 'create')->name('create');
-        Route::post('store', 'store')->name('store');
-        Route::get('{id}/edit', 'edit')->name('edit');
-        Route::post('{id}/edit', 'update')->name('update');
-        Route::get('{id}/delete', 'destroy')->name('delete');
-    });
-});
 
 Route::controller(StudyController::class)->group(function () {
     Route::group(['prefix' => 'study', 'as' => 'study.'], function () {

@@ -14,7 +14,7 @@
             @foreach ($images as $image)
                 <div class="col-lg-3">
                     <div class="glry_box">
-                        <a class="example-image-link" href="{{ asset($image) }}" data-lightbox="example-set"><img class="example-image" src="{{ asset($image) }}" alt="{{ $gallery->title }}"/></a>
+                        <a class="example-image-link" href="{{ ($image) }}" data-lightbox="example-set"><img class="example-image" src="{{ ($image) }}" alt="{{ $gallery->title }}"/></a>
                     </div>
                 </div>
             @endforeach

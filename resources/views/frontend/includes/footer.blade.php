@@ -1,65 +1,71 @@
-<footer style="background: url('{{ asset('images/ftr_bg.jpg') }}') no-repeat center center; background-size: cover;">
-	<div class="container">
-		<div class="row">
-			<div class="col-xl-4 col-lg-12 col-md-12">
-				<div class="ftr_abt">
+<footer id="footer" class="footer dark-background">
 
- <a href="{{ url('/') }}">
-    <img src="{{ (businessSetting(1)->footer_logo) }}" alt="logo">
-</a>
-					<p>{{businessSetting(1)->brief_description}}</p>
-				</div>
-			</div>
-			<div class="col-xl-4 col-lg-6 col-md-12">
-				<div class="links">
-					<h3>Quick Links</h3>
-                    <ul>
-                        @foreach(\App\Models\Page::where('parent_id', '!=', 0)->orderBy('position', 'asc')->get() as $page)
-                            <li>
-                                <a href="{{ route('page.show', ['slug' => $page->slug]) }}">
-                                    <img src="{{ asset('images/arow.png') }}" alt="arow"> {{ $page->name }}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Carry Code Technology</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>carrycodetechnology@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
 
-				</div>
-			</div>
-			<div class="col-xl-4 col-lg-6 col-md-12">
-				<div class="cntct">
-					<h3>Get in Touch</h3>
-					<div class="adrs">
-						<div class="adrs_box">
-							<div class="adrs_inr">
-								<div class="adrs_icn"><img src="{{ asset('images/adrs01.png')}}" alt="adrs"></div>
-							</div>
-							<p>
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
 
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
 
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
 
-								<a href="tel:+91-1427-294181">{{ businessSetting(1)->contact_numbers ?? 'Not Available' }}</a>
-							</p>
-						</div>
-						<div class="adrs_box">
-							<div class="adrs_inr">
-								<div class="adrs_icn"><img src="{{ asset('images/adrs02.png')}}" alt="adrs"></div>
-							</div>
-							<p>
-								<a href="mailto:dccb.dausa@rajasthan.gov.in">{{businessSetting(1)->email}}</a>
-							</p>
-						</div>
-						<div class="adrs_box">
-							<div class="adrs_inr">
-								<div class="adrs_icn"><img src="{{ asset('images/adrs03.png')}}" alt="adrs"></div>
-							</div>
-							<p>{{businessSetting(1)->address}}</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-<div class="copyright">
-	<p>Copyright © 2024 The Dausa Central Co-Oprative Bank - All rights reserved. </p>
-</div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Sailor</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>

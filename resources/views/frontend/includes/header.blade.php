@@ -1,387 +1,435 @@
-<section class="main_banner">
-	<div class="container-fluid">
-		<div class="row">
-            @php
-            $sliders = \App\Models\Slider::all();
-        @endphp
-        @foreach($sliders as $slider)
-			<div class="col-md-12 no_padding">
-				<div class="mn_bnr">
-                    <img src="{{ ($slider->thumbnail_img) }}" alt="srvc_icn">
+<main class="main">
 
-				</div>
-			</div>
-            @endforeach
-		</div>
-	</div>
-</section>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
 
-<section class="branchs">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-4 col-md-6">
-				<div class="brnchs_txt">
-					<div class="head">
-						<h2>Our Branches</h2>
-						<hr>
-					</div>
-					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-				</div>
-			</div>
-			<div class="col-lg-8 col-md-6">
-				<div class="brnch_slide owl-carousel owl-theme">
-					<div class="item">
-						<div class="brnch_box">
-							<img src="images/brnch001.jpg" alt="brnch">
-							<div class="brnch-txt">
-								<h4>Manganj, Dausa</h4>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="brnch_box">
-							<img src="images/brnch002.jpg" alt="brnch">
-							<div class="brnch-txt">
-								<h4>Bandikui</h4>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="brnch_box">
-							<img src="images/brnch001.jpg" alt="brnch">
-							<div class="brnch-txt">
-								<h4>Manganj, Dausa</h4>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="brnch_box">
-							<img src="images/brnch002.jpg" alt="brnch">
-							<div class="brnch-txt">
-								<h4>Bandikui</h4>
-							</div>
-						</div>
-					</div>
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+        <div class="carousel-item active">
+          <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
+          <div class="carousel-container">
+            <h2>Welcome to Sailor<br></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a href="#featured-services" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
 
-<section class="hm_abt">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-6 no_padding">
-				<div class="hm_abt_imag">
-					<img src="images/hm_abt.jpg" alt="abt">
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="hm_abt_txt">
-					<p>पंजीयन बैंक का पंजीयन सहकारी संस्था अधिनियम 2001 के अधिनियम संख्या 16 की धारा 6 उपधारा 1 अनुच्छेद (क, ख, ग , घ , के अन्तर्गत दिनांक 19 फरवरी, 2004 को हुआ है, जिसका पंजीयन क्रमांक 248/एलडी है। </p>
-					<p>लाईसेन्स संख्यारू भारतीय रिजर्व बैंक द्वारा बैंक को प्रदान किये गये लाईसेन्स की संख्या ग्राआऋवि जय सह 25 दिनांक 03 नवम्बर, 2011 है।</p>
-					<p>कार्य क्षेत्र बैंक का कार्य क्षेत्र सम्पूर्ण दौसा जिला तक सीमित है। </p>
-					<p>शाखाएं बैंक में कुल 9 शाखाएं क्रमशः दौसा, लालसोट, बाँदीकुई, सिकराय, महवा, मण्डावर, रामगढ़ पचवारा, राहुवास ,एवं सिकन्दरा कार्यरत हैं। साथ ही बैंक छेत्रानगत  कुल 203 ग्राम सेवा सहकारी समितियाँ भी कार्यषील हैं। बैंक का प्रधान कार्यालय, सहकार भवन, खान भांखरी रोड़, दौसा पर स्थित है। सहकार भवन में दौसा केन्द्रीय सहकारी बैंक लि, प्राथमिक सहकारी भूमि विकास बैंक लि, दौसा, कार्यालय उप रजिस्ट्रार, सहकारी समितियाँ दौसा व कार्यालय विषेष लेखा परीक्षक, दौसा के कार्यालय स्थित हैं।</p>
-					<p>उद्देश्य: बैंक का उद्देश्य जिले के कृषकों, सदस्यों को शीर्ष सहकारी बैंक, नाबार्ड की स्वीकृत योजनाओं के अन्तर्गत अल्पकालीन कृषि ऋण , मध्यकालीन कृषि ऋण, अकृषि ऋण ,एवं अन्य विविधिकृत ऋण उपलब्ध करवाना है।</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+        <div class="carousel-item">
+          <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="">
+          <div class="carousel-container">
+            <h2>At vero eos et accusamus</h2>
+            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
+            <a href="#featured-services" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
 
-<section class="hm_srvcs">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12">
-                <div class="hm_srvc_txt">
-                    <div class="head">
-                        <h2>Our Services</h2>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                @php
-                    $services = \App\Models\Ourservice::all();
-                @endphp
-                @foreach($services as $service)
-                    <div class="col-lg-4 col-md-4">
-                        <div class="srvc_box">
-                            <div class="srvc_icn">
-                                <div class="srvc_icn_inr">
-                                    <!-- Assuming you store the image path in 'thumbnail_img' column -->
-                                    <img src="{{ ($service->thumbnail_img) }}" alt="srvc_icn">
-                                </div>
-                            </div>
-                            <div class="srvc_txt">
-                                <h4>{{ $service->title }}</h4>
-                                <p>{{ strip_tags($service->brief_description) }}</p>
+        <div class="carousel-item">
+          <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="">
+          <div class="carousel-container">
+            <h2>Temporibus autem quibusdam</h2>
+            <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
+            <a href="#featured-services" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
 
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>About Us<br></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <a href="about.html" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
         </div>
+
+      </div>
+
+      <style>
+        /* Main Section */
+        .directors-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 80px 5%;
+            background: linear-gradient(135deg, #0a1d3d, #18508f, #2c7bc3);
+            color: #fff;
+            text-align: center;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        /* Card Styling */
+        .director-card {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 35px;
+            border-radius: 18px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hover Effect */
+        .director-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+            border-color: #e0b74f;
+        }
+
+        /* Profile Image */
+        .director-card img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 5px solid #e0b74f;
+            object-fit: cover;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .director-card:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Director Name */
+        .director-card h3 {
+            font-size: 1.7rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        /* Designation */
+        .director-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #e0b74f;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        /* Description */
+        .director-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .directors-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        </style>
+
+<div class="directors-section">
+    <!-- Director 1 -->
+    <div class="director-card">
+        <img src="assets/img/Arpitparihar.jpg" alt="Arpit Parihar">
+        <h3>Arpit Parihar</h3>
+        <h4>Co-Founder & Director</h4>
+        <p>
+            A visionary leader in AI-driven automation and digital transformation, Arpit specializes in developing scalable enterprise solutions. His expertise in machine learning and cloud computing has revolutionized intelligent business operations, ensuring agility and efficiency.
+        </p>
+        <p><i>“Innovation is seeing what everybody has seen and thinking what nobody has thought.”</i> – Dr. Albert Szent-Györgyi</p>
     </div>
-</section>
+
+    <!-- Director 2 -->
+    <div class="director-card">
+        <img src="assets/img/director2.jpg" alt="Director Name">
+        <h3>Director Name 2</h3>
+        <h4>Co-Founder & Director</h4>
+        <p>
+            With a deep passion for cybersecurity and cloud architecture, he has built secure and scalable infrastructures. His commitment to AI-powered automation helps businesses streamline operations while ensuring top-notch security.
+        </p>
+        <p><i>“Leadership is not about being in charge. It is about taking care of those in your charge.”</i> – Simon Sinek</p>
+    </div>
+
+    <!-- Director 3 -->
+    <div class="director-card">
+        <img src="assets/img/director3.jpg" alt="Director Name">
+        <h3>Director Name 3</h3>
+        <h4>Co-Founder & Director</h4>
+        <p>
+            A strategic thinker in digital growth and data analytics, he empowers businesses to leverage technology for competitive advantage. His innovative mindset drives intelligent solutions tailored for modern industries.
+        </p>
+        <p><i>“The best way to predict the future is to create it.”</i> – Peter Drucker</p>
+    </div>
+</div>
 
 
-<section class="hm_plcs">
-    <div class="container">
-        <div class="row">
-            <!-- Left container for Policies & Guidelines -->
-            <div class="col-md-8 no_padding">
-                <div class="plcs_box">
-                    <div class="head">
-                        <h2>Policies & Guidelines</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="inr_plcs">
-                                <h4>KYC & AML</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="inr_plcs">
-                                <h4>DICGC</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="inr_plcs">
-                                <h4>DEATH CLAIM</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="inr_plcs">
-                                <h4>NOMINATION</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="inr_plcs">
-                                <h4>SJSY</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="inr_plcs">
-                                <h4>RSVDB</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right container for Downloads with scroll bar -->
-            <div class="col-md-4 no_padding">
-                <div class="hm_dwnlds">
-                    <div class="head">
-                        <h2>Downloads</h2>
-                    </div>
-                    <ul>
-                        @foreach (\App\Models\Subcategory::with('banners')->get() as $subcategory)
-                            <li>
-
-                                    <span class="subcategory-name">{{ $subcategory->name }}</span>
 
 
-                                    @if ($subcategory->banners->count() > 0)
-                                        @foreach ($subcategory->banners as $banner)
-                                            <!-- Display PDF link -->
-                                            @if ($banner->thumbnail_img)
+    </section><!-- /About Section -->
 
-                                                <a href="{{ ($banner->thumbnail_img) }}" target="_blank" class="pdf-link">
-                                                    <img src="{{('images/pdf.png') }}" alt="pdf" class="pdf-icon">
-                                                </a>
-                                            @else
-                                                <span class="text-muted">(No PDF)</span>
-                                            @endif
-                                        @endforeach
-                                    @else
-                                        <span class="text-muted">(No PDF)</span>
-                                    @endif
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
 
         </div>
 
-</section>
+      </div>
 
-<style>
-/* Ensure both containers are aligned and occupy the full space */
-/* Ensure both containers are aligned and occupy the full space */
-/* Ensure both containers are aligned and occupy the full space */
-/* Ensure both containers are aligned and occupy the full space */
-.no_padding {
-    padding: 0;
-    margin: 0;
-}
+    </section><!-- /Clients Section -->
 
-/* Downloads container styling */
-.hm_dwnlds {
-    padding: 10px;
-* Light background for better contrast */
+    <!-- Services Section -->
+    <section id="services" class="services section">
 
+      <div class="container">
 
-}
+        <div class="row gy-4">
 
-/* Header inside the Downloads container */
-.hm_dwnlds .head {
-    position: sticky;
-    top: 0;
- /* Match the container's background */
-    padding: 10px;
-    z-index: 10;
-
-}
-
-/* Scrollable list styling */
-.hm_dwnlds ul {
-    max-height: 300px; /* Set a fixed height for the list */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding-left: 0;
-    list-style-type: none;
-}
-
-/* List items styling */
-.hm_dwnlds ul li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    padding: 5px;
-    /* Add a subtle divider between items */
-}
-
-/* Styling for links */
-.hm_dwnlds ul li a {
-    text-decoration: none;
-
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-
-/* Subcategory name styling */
-.subcategory-name {
-    margin-right: 10px;
-    flex-grow: 1;
-    font-size: 16px;
-
-}
-
-/* PDF link styling */
-.pdf-link {
-    margin-left: 5px;
-}
-
-.pdf-icon {
-    width: 30px; /* Adjusted size for better fit */
-    height: 30px;
-}
-
-/* "No PDF" text styling */
-.text-muted {
-    font-size: 14px;
-    color:white !important;
-}
-
-/* Scroll bar customization */
-.hm_dwnlds ul::-webkit-scrollbar {
-    width: 8px; /* Scrollbar width */
-}
-
-.hm_dwnlds ul::-webkit-scrollbar-thumb {
-    background-color: white !important; /* White scrollbar thumb */
-    border-radius: 5px;
-}
-
-.hm_dwnlds ul::-webkit-scrollbar-track {
-    background-color: red !important;/* Red background for the scrollbar track */
-}
-
-/* Adjust max-height for mobile devices */
-@media (max-width: 767px) {
-    .hm_dwnlds ul {
-        max-height: 250px;
-    }
-
-    .pdf-icon {
-        width: 25px;
-        height: 25px;
-    }
-}
-
-
-
-
-</style>
-
-<!-- jQuery (Required) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Owl Carousel CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-<!-- Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-<section class="hm_glry">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="hm_glry_box">
-                    <div class="head">
-                        <h2>Photo Gallery</h2>
-                        <hr>
-                    </div>
-                </div>
-
-                <!-- Owl Carousel -->
-
-                @foreach(\App\Models\Gallery::latest()->take(4)->get() as $item)
-                <div class="col-lg-3">
-                    <a href="{{ route('gallery.detail', $item->slug) }}">
-                        <div class="glry_box">
-                            @php
-                                $images = json_decode($item->image_paths);
-                            @endphp
-                            @if($images && count($images) > 0)
-                                <div class="glry_imag">
-                                    <img class="example-image" src="{{ $images[0] }}" alt="{{ $item->title }}" />
-                                </div>
-                            @endif
-                            <h4>{{ $item->title }}</h4>
-                        </div>
-                    </a>
-                </div>
-            @endforeach
-
-                </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-briefcase icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
+                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              </div>
             </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Dolor Sitema</a></h4>
+                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-bar-chart icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Sed ut perspiciatis</a></h4>
+                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-binoculars icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Magni Dolores</a></h4>
+                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-brightness-high icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Nemo Enim</a></h4>
+                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-calendar4-week icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Eiusmod Tempor</a></h4>
+                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
         </div>
 
-</section>
+      </div>
 
+    </section><!-- /Services Section -->
 
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
 
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Necessitatibus eius consequatur</p>
+      </div><!-- End Section Title -->
 
-<!-- Custom CSS for Arrows -->
+      <div class="container">
 
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-<section class="hm_map">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12 no_padding">
-				<div class="mp">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4749.614774499119!2d76.33219753023262!3d26.89744105238296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396d8cc38128ec89%3A0x2b5036dbb24289eb!2sDausa%20Kendriya%20Sahakari%20Bank%20Ltd.Dausa!5e0!3m2!1sen!2sin!4v1734236757484!5m2!1sen!2sin" width="100%" height="470" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-product">Card</li>
+            <li data-filter=".filter-branding">Web</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Product 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Branding 1</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Product 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Branding 2</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Product 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Branding 3</h4>
+                <p>Lorem ipsum, dolor sit</p>
+                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+  </main>
